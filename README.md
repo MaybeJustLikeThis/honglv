@@ -32,4 +32,7 @@
 本项目是一个基于 Vite3 搭建的 Vue3 项目模板，集成了JavaScript、Vue Router、Axios、ESLint
 
 运行环境： VSCode、**Node16+**、 VSCode 插件：Vue Language Features (Volar)、Prettier - Code formatter
+node版本：18.12.1
+vue：3.3.4
+vite:4.5.1
 

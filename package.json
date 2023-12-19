@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --force",
     "build": "vite build",
     "preview": "vite preview",
     "eslint": "eslint src --ext .js,.vue,.ts,.jsx,.tsx --ignore-path .gitignore --fix"
-     
   },
   "dependencies": {
     "vue": "^3.3.4",
@@ -20,7 +19,8 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-vue": "^9.18.1",
-    "vite": "^4.4.5",
+    "swiper": "^8.4.7",
+    "vite": "^4.5.1",
     "vite-plugin-eslint": "^1.8.1"
   }
 }
