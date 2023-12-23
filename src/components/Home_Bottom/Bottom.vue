@@ -7,7 +7,7 @@
         <p>晋ICP备10086253号·3</p>
         <img
           class="copyright_logo"
-          src="../../public/home/盾牌保险认证_o.png"
+          src="../../../public/home/盾牌保险认证_o.png"
           alt=""
         />
       </div>
@@ -29,7 +29,7 @@ export default {
 <style scoped>
 .bottom {
   position: relative;
-  top: 100px;
+  top: 150px;
   background-color: #d40000;
   width: 100%;
   height: 300px;

@@ -19,23 +19,24 @@
               ><br />太原市唯一一处大型旧石器遗址</span
             >
           </div>
+          <div class="img second"><img src="../../../public/home/Subtract.png" alt=""></div>
         </div>
         <div class="route_showbox">
-          <div class="img"></div>
+          <div class="img"><img src="../../../public/home/Rectangle 25.png" alt=""></div>
           <span
             ><i>02</i> <strong>神秘古交</strong
             ><br />“龙城秘境”地处与角子崖，地理位置独特，地形地貌奇绝</span
           >
         </div>
         <div class="route_showbox">
-          <div class="img"></div>
+          <div class="img"><img src="../../../public/home/26.png" alt="" /></div>
           <span
             ><i>03</i> <strong>英雄古交</strong
             ><br />晋绥八分区（专署旧址），被党中央誉为“钢铁走廊”</span
           >
         </div>
         <div class="route_showbox">
-          <div class="img"></div>
+          <div class="img"><img src="../../../public/home/27.png" alt=""></div>
           <span
             ><i>04</i> <strong>夜游古交</strong
             ><br />古交电厂夜景，静谧而绚烂</span
@@ -148,7 +149,7 @@ p {
   position: relative;
   width: 100%;
   height: 85%;
-  background-color: turquoise;
+  /* background-color: turquoise; */
 }
 .route_showbox {
   position: relative;
@@ -166,6 +167,8 @@ p {
   width: 36%;
   background-color: yellowgreen;
   border: none;
+  display: flex;
+  flex-direction: column;
 }
 .img {
   position: relative;
@@ -180,6 +183,16 @@ p {
   height: 33%;
   margin: 0px;
   background-color: #ffe4e4;
+}
+.img.second {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background-color: #ffe4e4;
+}
+img {
+  max-width: 100%;
+  height: 100%;
 }
 span {
   position: relative;

@@ -1,7 +1,7 @@
 <template>
   <div class="line">
     <div class="logo">
-      <img class="xx_logo" src="../../public/home/电话.png" />
+      <img class="xx_logo" src="../../../public/home/电话.png" />
       <p>联系电话:010-1008639</p>
     </div>
     <a class="text">红侣旅行团</a>
@@ -12,7 +12,7 @@
   </div>
   <div class="line">
     <div class="logo">
-      <img class="xxx_logo" src="../../public/home/邮箱.png" />
+      <img class="xxx_logo" src="../../../public/home/邮箱.png" />
       <p>官方邮箱:honglv_clouds@163.com</p>
     </div>
     <a class="text">代码托管平台</a>

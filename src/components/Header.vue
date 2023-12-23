@@ -52,23 +52,7 @@ export default {};
   width: 80px;
   flex: 1 1 auto;
 }
-@keyframes button {
-  0% {
-  }
-  100% {
-    color: black;
-    box-shadow: 0px 20px 20px #712020;
-    border-radius: 25%;
-  }
-}
-@keyframes out {
-  100% {
-    color: black;
-    color: #f5f5f5;
-    background-color: rgb(238, 96, 96);
-    transform: translateY(1px);
-  }
-}
+
 .nav_box {
   background-color: #d40000;
   flex: 1 1;
@@ -78,9 +62,12 @@ export default {};
   color: white;
   /* border-radius: 25%; */
   border: none;
+  transition: 0.75s;
 }
 .nav_box:hover {
-  animation: button 0.75s;
+  color: black;
+  box-shadow: 0px 20px 20px #712020;
+  border-radius: 25%;
   animation-fill-mode: forwards;
 }
 
@@ -97,16 +84,11 @@ export default {};
   text-align: center;
   line-height: 80px;
   color: white;
+  transition: 0.5s;
 }
-@keyframes login {
-  from {
-  }
-  to {
-    color: black;
-  }
-}
+
 .login:hover {
-  animation: login 0.5s;
+  color: black;
   animation-fill-mode: forwards;
 }
 </style>
