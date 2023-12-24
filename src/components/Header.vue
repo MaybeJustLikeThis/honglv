@@ -2,13 +2,15 @@
   <div class="header">
     <div class="nav">
       <div class="nav_logo">
-        <div class="logo"></div>
+        <div class="logo">
+          <img src="../../public/home/红侣旅行网.png" alt="" />
+        </div>
         <button class="nav_box">首页</button>
         <button class="nav_box">文化古交</button>
         <button class="nav_box">畅游古交</button>
-        <button class="nav_box">服务</button>
+        <button class="nav_box">数据中心</button>
       </div>
-
+      ·
       <div class="login">登录/注册</div>
     </div>
   </div>
@@ -45,12 +47,16 @@ export default {};
   justify-content: space-around;
 }
 .logo {
-  background-color: royalblue;
+  background-color: #d40000;
   position: relative;
   bottom: 40px;
   height: 120px;
-  width: 80px;
-  flex: 1 1 auto;
+  /* width:58px; */
+  flex: 0 1 auto;
+}
+img {
+  height: 100%;
+  width: 100%;
 }
 
 .nav_box {

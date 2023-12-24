@@ -34,7 +34,7 @@ export default {
 <style scoped>
 .line {
   /* background-color: cadetblue; */
-  width: 60%;
+  width: 63.5%;
   height: 50px;
   position: relative;
   top: 22%;
@@ -78,12 +78,20 @@ p {
   position: relative;
   top: 5px;
   height: 120%;
+  min-height: 120%;
+  max-height: 120%;
   width: 7%;
+  min-width: 7%;
+  max-width: 7%;
 }
 .xxx_logo {
   position: relative;
   top: 7px;
   height: 100%;
+  min-height: 100%;
+  max-height: 100%;
   width: 8%;
+  min-width: 8%;
+  max-width: 8%;
 }
 </style>

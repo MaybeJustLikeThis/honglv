@@ -41,7 +41,7 @@ export default {
 <style scoped>
 .outbox {
   position: relative;
-  top: 50px;
+  top: 100px;
   width: 1050px;
   height: 400px;
   margin-left: auto;
@@ -51,7 +51,7 @@ export default {
 }
 .show {
   position: relative;
-  top: 100px;
+  top: 50px;
   height: 100%;
   width: 100%;
   min-height: 400px;
@@ -78,15 +78,20 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   position: relative;
-  top: 7%;
+  top: 0%;
   width: 100%;
-  height: 80%;
-  /* left: 18%; */
-  /* background-color: indigo; */
+  height: 75%;
+ 
 }
 
 .first {
-  flex-grow: 2;
+  /* flex-grow: 2; */
   background-color: lightgoldenrodyellow;
+}
+.box:hover {
+  /* animation: fly 0.75s; */
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  flex: 40%;
 }
 </style>

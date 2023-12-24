@@ -11,26 +11,17 @@
     :loop-additional-slides="1"
   >
     <swiper-slide
-      ><img
-        class="img_box"
-        src="../../public/0df0be855e8344bee640adff563eebb.jpg"
-        alt=""
+      ><img class="img_box" src="../../public/home/太原角子崖.png" alt=""
+    /></swiper-slide>
+    <swiper-slide
+      ><img class="img_box" src="../../public/home/古交电厂夜景.png" alt=""
     /></swiper-slide>
     <swiper-slide
       ><img
         class="img_box"
-        src="../../public/473ce0dcfd58c43891514ee61bd26ce.jpg"
+        src="../../public/home/”红侣“项目实践基地挂牌成立仪式.png"
         alt=""
     /></swiper-slide>
-    <swiper-slide
-      ><img
-        class="img_box"
-        src="../../public/67f69a9ef72a4db0eef58633988fe8d.jpg"
-        alt=""
-    /></swiper-slide>
-    <div class="mask">
-      <div class="mask_word">{{ message }}</div>
-    </div>
   </swiper>
 </template>
 <script>
@@ -81,27 +72,13 @@ export default {
   text-align: center;
 }
 .swiper {
-  width: 70.5%;
+  width: 64%;
   height: 500px;
+  --swiper-theme-color: #999999;
 }
 
 .img_box {
   width: 100%;
   height: 500px;
-}
-.mask {
-  width: 100%;
-  height: 70px;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  bottom: 0px;
-  z-index: 1000;
-  color: white;
-  font-size: 24px;
-  line-height: 75px;
-}
-.mask_word {
-  position: relative;
-  left: 20px;
 }
 </style>

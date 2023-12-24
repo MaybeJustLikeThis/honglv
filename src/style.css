@@ -6,4 +6,6 @@ body {
   height: 100%;
   min-width: 100%;
   min-height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }

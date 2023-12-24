@@ -2,11 +2,25 @@
   <div class="outbox">
     <div class="show">
       <div class="title">—————— 游记攻略 ——————</div>
+      <div class="title xx"><i>背包，相机，目的地， 下一站，我不告诉你</i></div>
       <div class="shower">
-        <showbox img_src="" text=""></showbox>
-        <showbox img_src="" text=""></showbox>
-        <showbox img_src="" text=""></showbox>
-        <showbox img_src="" text=""></showbox>
+        <showbox
+          img_src="../../../public/home/001.png"
+          text="县（市）级 文物保护单位"
+        ></showbox>
+
+        <showbox
+          img_src="../../../public/home/002.png"
+          text="“西山晓月” 夜景灯光"
+        ></showbox>
+        <showbox
+          img_src="../../../public/home/003.png"
+          text="龙城向新生态恢复示范园"
+        ></showbox>
+        <showbox
+          img_src="../../../public/home/004.png"
+          text="&nbsp&nbsp&nbsp两川相夹 &nbsp&nbsp&nbsp背山临水"
+        ></showbox>
       </div>
     </div>
   </div>
@@ -30,14 +44,14 @@ export default {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
-  min-height: 400px;
+  min-height: 200px;
 }
 .show {
   position: relative;
-  top: 100px;
+  top: 0px;
   height: 100%;
   width: 100%;
-  min-height: 400px;
+  min-height: 200px;
   min-width: 550px;
   max-width: 1000%;
   /* background-color: greenyellow; */
@@ -61,15 +75,34 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   position: relative;
-  top: 7%;
+  /* top: 7%; */
   width: 100%;
-  height: 80%;
+  height: 100%;
   /* left: 18%; */
   /* background-color: indigo; */
 }
 
-.first {
-  flex-grow: 2;
-  background-color: lightgoldenrodyellow;
+.box {
+  margin-top: 0px;
+  border-radius: 50%;
+  background-color: aquamarine;
+}
+:deep(.po) {
+  background: #ffffff00;
+  border-radius: 0 0 0 0;
+  font-size: 10px;
+  color: #141212;
+  bottom: 32%;
+  left: 36%;
+  width: 30%;
+  font-weight: 540;
+}
+
+.title.xx {
+  position: relative;
+  font-size: 13px;
+  width: 13%;
+  left: 44%;
+  top: -30px;
 }
 </style>

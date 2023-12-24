@@ -148,7 +148,7 @@ p {
   flex-wrap: wrap;
   position: relative;
   width: 100%;
-  height: 85%;
+  height: 90%;
   /* background-color: turquoise; */
 }
 .route_showbox {
@@ -196,6 +196,8 @@ img {
 }
 span {
   position: relative;
+  max-width: 60%;
+  max-height: 80%;
   top: 20px;
   left: 10px;
   font-size: 13px;

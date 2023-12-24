@@ -19,7 +19,7 @@
       <div class="box">
         <span>2019-07-21 16:11:32</span><br />山西省古交市加速农村煤改电进程
       </div>
-      <div class="box"><a>更多</a></div>
+      <div class="box more"><a>更多</a></div>
     </div>
   </div>
 </template>
@@ -56,7 +56,7 @@ p {
 .content {
   position: relative;
   width: 100%;
-  height: 85%;
+  height: 90%;
   display: flex;
   flex-direction: column;
 }
@@ -66,12 +66,18 @@ p {
   font-size: 14px;
   margin: 10px;
 }
+.box.more{
+  margin: 0px;
+  margin-top: 10px;
+}
 span {
   color: #a4a4a4;
   font-size: 12px;
 }
 a {
   position: relative;
+  width: 100%;
+  margin: 0px;
   top: 1%;
   font-size: 16px;
   left: 44%;

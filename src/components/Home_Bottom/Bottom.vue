@@ -38,8 +38,8 @@ export default {
   /* background-color: tomato; */
   position: relative;
   top: 44%;
-  left: 18%;
-  width: 61%;
+  left: 19%;
+  width: 62.5%;
   height: 20%;
   border-top-width: 3px;
   border-top-color: white;
