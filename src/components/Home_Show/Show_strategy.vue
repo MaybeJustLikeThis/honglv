@@ -5,20 +5,20 @@
       <div class="title xx"><i>背包，相机，目的地， 下一站，我不告诉你</i></div>
       <div class="shower">
         <showbox
-          img_src="../../../public/home/001.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/001.png"
           text="县（市）级 文物保护单位"
         ></showbox>
 
         <showbox
-          img_src="../../../public/home/002.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/002.png"
           text="“西山晓月” 夜景灯光"
         ></showbox>
         <showbox
-          img_src="../../../public/home/003.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/004.png"
           text="龙城向新生态恢复示范园"
         ></showbox>
         <showbox
-          img_src="../../../public/home/004.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/003.png"
           text="&nbsp&nbsp&nbsp两川相夹 &nbsp&nbsp&nbsp背山临水"
         ></showbox>
       </div>

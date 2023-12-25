@@ -5,23 +5,23 @@
       <div class="shower">
         <showbox
           class="first"
-          img_src="../../../public/home/Rectangle 32.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2032.png"
           text="景区"
         ></showbox>
         <showbox
-          img_src="../../../public/home/Rectangle 33.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2033.png"
           text="线路"
         ></showbox>
         <showbox
-          img_src="../../../public/home/Rectangle 34.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2034.png"
           text="美食"
         ></showbox>
         <showbox
-          img_src="../../../public/home/Rectangle 35.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2035.png"
           text="酒店"
         ></showbox>
         <showbox
-          img_src="../../../public/home/Rectangle 36.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2036.png"
           text="购物"
         ></showbox>
       </div>
@@ -81,7 +81,6 @@ export default {
   top: 0%;
   width: 100%;
   height: 75%;
- 
 }
 
 .first {

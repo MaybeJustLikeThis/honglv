@@ -5,40 +5,40 @@
       <div class="shower">
         <showbox
           class="first"
-          img_src="../../../public/home/hot_1.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_1.png"
           text="角子崖"
           ><slot></slot
         ></showbox>
         <showbox
-          img_src="../../../public/home/hot_2.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_2.png"
           text="吕梁山"
         ></showbox>
         <showbox
-          img_src="../../../public/home/hot_3.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_3.png"
           text="古交红豆山庄"
         ></showbox>
         <showbox
-          img_src="../../../public/home/hot_4.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_4.png"
           text="古交千佛寺"
         ></showbox>
         <showbox
-          img_src="../../../public/home/hot_5.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_5.png"
           text="晋绥八分区旧址"
         ></showbox>
         <showbox
-          img_src="../../../public/home/hot_6.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_6.png"
           text="古交水泉寨"
         ></showbox>
         <showbox
-          img_src="../../../public/home/hot_7.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_7.png"
           text="歇马武氏宅院"
         ></showbox>
         <showbox
-          img_src="../../../public/home/hot_8.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_8.png"
           text="石千峰文化遗址"
         ></showbox>
         <showbox
-          img_src="../../../public/home/hot_9.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_9.png"
           text="真能和尚灵塔s"
         ></showbox>
       </div>
@@ -58,7 +58,7 @@ export default {
 <style scoped>
 .outbox {
   position: relative;
-  top:50px;
+  top: 50px;
   width: 1050px;
   height: 500px;
   margin-left: auto;

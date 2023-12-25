@@ -66,7 +66,7 @@ p {
   font-size: 14px;
   margin: 10px;
 }
-.box.more{
+.box.more {
   margin: 0px;
   margin-top: 10px;
 }

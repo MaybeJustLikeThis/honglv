@@ -3,7 +3,7 @@
     <div class="nav">
       <div class="nav_logo">
         <div class="logo">
-          <img src="../../public/home/红侣旅行网.png" alt="" />
+          <img src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E7%BA%A2%E4%BE%A3%E6%97%85%E8%A1%8C%E7%BD%91.png"/>
         </div>
         <button class="nav_box">首页</button>
         <button class="nav_box">文化古交</button>
