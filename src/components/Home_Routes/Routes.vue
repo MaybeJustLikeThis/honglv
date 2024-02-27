@@ -4,10 +4,10 @@
       <div class="routes_header">
         <p>精品路线</p>
         <div class="route_flex">
-          <div class="route_flexbox x">古老古交</div>
-          <div class="route_flexbox xx">神秘古交</div>
-          <div class="route_flexbox xxx">英雄古交</div>
-          <div class="route_flexbox xxxx">夜游古交</div>
+          <button class="route_flexbox x">古老古交</button>
+          <button class="route_flexbox xx">神秘古交</button>
+          <button class="route_flexbox xxx">英雄古交</button>
+          <button class="route_flexbox xxxx">夜游古交</button>
         </div>
         <div class="ontherway">其他路线></div>
       </div>
@@ -136,15 +136,39 @@ p {
   line-height: 200%;
   text-align: center;
   border-radius: 14px;
+  transition: 0.75s;
+  border: none;
 }
+
 .route_flexbox.x {
   background-color: #ffd700;
   color: #af9404;
+}
+.route_flexbox.x:hover {
+  color: black;
+  box-shadow: 3px 3px 3px 3px #681717;
+  animation-fill-mode: forwards;
+}
+.route_flexbox.xx:hover {
+  color: black;
+  box-shadow: 3px 3px 3px 3px #681717;
+  animation-fill-mode: forwards;
+}
+.route_flexbox.xxx:hover {
+  color: black;
+  box-shadow: 3px 3px 3px 3px #681717;
+  animation-fill-mode: forwards;
+}
+.route_flexbox.xxxx:hover {
+  color: black;
+  box-shadow: 3px 3px 3px 3px #681717;
+  animation-fill-mode: forwards;
 }
 .route_flexbox.xx {
   background-color: #00bfff;
   color: #0482ac;
 }
+
 .route_flexbox.xxx {
   background-color: #9acd32;
   color: #638322;
