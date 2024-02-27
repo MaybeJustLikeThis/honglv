@@ -10,6 +10,7 @@
     "eslint": "eslint src --ext .js,.vue,.ts,.jsx,.tsx --ignore-path .gitignore --fix"
   },
   "dependencies": {
+    "@jsdawn/vue3-tinymce": "^2.0.4",
     "vue": "^3.3.4",
     "vue-router": "4"
   },
