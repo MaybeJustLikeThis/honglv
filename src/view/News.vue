@@ -5,7 +5,7 @@
       <BreadCrumbs></BreadCrumbs>
       <div class="typeArea">
         <NewsHeader></NewsHeader>
-        <NewsImage></NewsImage>
+        <!-- <NewsImage></NewsImage> -->
         <NewsArticle></NewsArticle>
       </div>
     </div>
