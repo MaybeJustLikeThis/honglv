@@ -11,10 +11,16 @@
     :loop-additional-slides="1"
   >
     <swiper-slide
-      ><img class="img_box" src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E5%A4%AA%E5%8E%9F%E8%A7%92%E5%AD%90%E5%B4%96.png" alt=""
+      ><img
+        class="img_box"
+        src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E5%A4%AA%E5%8E%9F%E8%A7%92%E5%AD%90%E5%B4%96.png"
+        alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img class="img_box" src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E5%8F%A4%E4%BA%A4%E7%94%B5%E5%8E%82%E5%A4%9C%E6%99%AF.png" alt=""
+      ><img
+        class="img_box"
+        src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E5%8F%A4%E4%BA%A4%E7%94%B5%E5%8E%82%E5%A4%9C%E6%99%AF.png"
+        alt=""
     /></swiper-slide>
     <swiper-slide
       ><img

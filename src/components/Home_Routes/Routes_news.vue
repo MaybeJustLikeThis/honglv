@@ -3,9 +3,15 @@
     <div class="header"><p>最新资讯</p></div>
     <div class="content">
       <div class="box">
-        <span>2023-10-30 20:41:00</span><br />"寻访山西文化新名片"|遇见古交
-        成为故交
+        <router-link
+          to="/home_routes_news"
+          style="text-decoration: none; color: black"
+        >
+          <span>2023-10-30 20:41:00</span><br />"寻访山西文化新名片"|遇见古交
+          成为故交
+        </router-link>
       </div>
+
       <div class="box">
         <span>2023-10-25 20:39:00</span><br />古交市三座人行天桥提前完工交付使用
       </div>
@@ -19,7 +25,9 @@
       <div class="box">
         <span>2019-07-21 16:11:32</span><br />山西省古交市加速农村煤改电进程
       </div>
-      <div class="box more"><a>更多</a></div>
+      <div class="box more">
+        <router-link to="/home_routes_news" class="link_more">更多</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -74,7 +82,7 @@ span {
   color: #a4a4a4;
   font-size: 12px;
 }
-a {
+.link_more {
   position: relative;
   width: 100%;
   margin: 0px;
@@ -82,5 +90,6 @@ a {
   font-size: 16px;
   left: 44%;
   color: #666666;
+  text-decoration: none;
 }
 </style>

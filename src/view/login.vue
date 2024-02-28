@@ -9,7 +9,7 @@ let index = ref(0);
     <div class="user-box">
         <div class="content">
             <div class="title">
-               旅行网 统一身份认证
+               红侣旅行网 统一身份认证
             </div>
             <div class="submit-change">
                 <div class="phone-submit" :class="{'active':index === 0}" @click="index = 0">验证码登陆</div>
