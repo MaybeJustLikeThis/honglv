@@ -24,6 +24,10 @@
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2035.png"
           text="酒店"
+          path="/home_show_hotel"
+          :query="{
+            xxxx: 2222,
+          }"
         ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2036.png"

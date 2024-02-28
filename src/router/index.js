@@ -8,6 +8,7 @@ import Home_routes from "../components/Home_routes(xjb)/routes.vue";
 import Home_routes_news from "../view/News.vue";
 import Home_show from "../view/Rank.vue";
 import Blog from "../view/Blog.vue";
+import home_show_hotel from "../view/Rank_2.vue";
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -46,6 +47,10 @@ const router = createRouter({
     {
       path: "/blog",
       component: Blog,
+    },
+    {
+      path: "/home_show_hotel",
+      component: home_show_hotel,
     },
   ],
 });
