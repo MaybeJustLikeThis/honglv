@@ -3,8 +3,8 @@
         <Header></Header>
         <div class="container">
             <div class="rank">
-                <ConcreteRank></ConcreteRank>
-                <!-- <ConcreteRank2></ConcreteRank2> -->
+                <!-- <ConcreteRank></ConcreteRank> -->
+                <ConcreteRank2></ConcreteRank2>
             </div>
             <div class="yeshu">
                 共<div class="number">{{ number }}</div>页

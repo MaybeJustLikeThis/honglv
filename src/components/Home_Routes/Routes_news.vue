@@ -4,7 +4,10 @@
     <div class="content">
       <div class="box">
         <router-link
-          to="/home_routes_news"
+          :to="{
+            path: '/home_routes_news',
+            query: { id: '123456' },
+          }"
           style="text-decoration: none; color: black"
         >
           <span>2023-10-30 20:41:00</span><br />"寻访山西文化新名片"|遇见古交

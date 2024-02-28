@@ -7,8 +7,8 @@
           class="first"
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_1.png"
           text="角子崖"
-          ><slot></slot
-        ></showbox>
+          to=''
+          ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_2.png"
           text="吕梁山"

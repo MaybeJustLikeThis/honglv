@@ -9,7 +9,7 @@
         </div>
         <router-link to="/home" class="nav_box">首页</router-link>
         <router-link to="/home_routes" class="nav_box">文化古交</router-link>
-        <button class="nav_box">畅游古交</button>
+        <router-link to="/home_show" class="nav_box">畅游古交</router-link>
         <router-link to="/data" class="nav_box">数据中心</router-link>
       </div>
 
@@ -85,8 +85,8 @@ img {
 }
 .nav_box:hover {
   color: black;
-  box-shadow: 0px 10px 10px #712020;
-  border-radius: 25%;
+  /* box-shadow: 0px 10px 10px #712020; */
+  /* border-radius: 25%; */
   animation-fill-mode: forwards;
 }
 

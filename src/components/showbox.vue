@@ -1,30 +1,33 @@
 <template>
   <div class="box">
-    <img :src="img_src" alt="" />
-    <div class="po">{{ text }}</div>
-    <!-- <div class="strategy"><img src="" alt="" />{{ text2 }}</div> -->
+    <router-link
+      :to="{
+        path: `${path}`,
+        query: query,
+      }"
+    >
+      <img :src="img_src" alt="" />
+      <div class="po">{{ text }}</div>
+    </router-link>
+
+    <!-- <div class="strategy">< img src="" alt="" />{{ text2 }}</div> -->
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {};
-  },
-  props: ["img_src", "text", "img_src2","text2"],
-};
+<script setup>
+import { defineProps } from "vue";
+const props = defineProps(["img_src", "text", "path", "query"]);
 </script>
 
 <style scoped>
 .box {
-  
   margin: 10px;
   margin-bottom: 0px;
   margin-top: 10px;
   /* background-color: lightcoral; */
   border-radius: 25px;
   transition: all 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-  
+
   min-width: 100px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;

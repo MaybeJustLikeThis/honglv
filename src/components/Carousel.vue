@@ -5,8 +5,7 @@
     :space-between="50"
     navigation
     :pagination="{ clickable: true }"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
+    
     :loop="true"
     :loop-additional-slides="1"
   >
@@ -53,16 +52,16 @@ export default {
     };
   },
   setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
+    // const onSwiper = (swiper) => {
+    //   console.log(swiper);
+    // };
+    // const onSlideChange = () => {
+    //   console.log("slide change");
+    // };
 
     return {
-      onSwiper,
-      onSlideChange,
+      // onSwiper,
+      // onSlideChange,
       modules: [Navigation, Pagination, Scrollbar, A11y],
     };
   },
