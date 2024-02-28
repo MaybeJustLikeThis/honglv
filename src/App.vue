@@ -1,6 +1,6 @@
 <template>
   <Home></Home>
-  <News></News>
+  <!-- <News></News> -->
   <!-- <Blog></Blog> -->
   <!-- <Push></Push> -->
 </template>
