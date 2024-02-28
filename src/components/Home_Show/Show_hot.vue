@@ -7,39 +7,56 @@
           class="first"
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_1.png"
           text="角子崖"
-          to=''
+          path="/home_routes_news"
+          :query="{ store: 'recommend', page: 'jiaoziya' }"
           ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_2.png"
           text="吕梁山"
+          path="/home_routes_news"
+          :query="{ store: 'recommend', page: 'lvliangshan' }"
         ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_3.png"
           text="古交红豆山庄"
+          path="/home_routes_news"
+          :query="{ store: 'recommend', page: 'hongdou' }"
         ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_4.png"
           text="古交千佛寺"
+          path="/home_routes_news"
+          :query="{ store: 'recommend', page: 'qianfosi' }"
         ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_5.png"
           text="晋绥八分区旧址"
+          path="/home_routes_news"
+          :query="{ store: 'recommend', page: 'bafenqu' }"
         ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_6.png"
           text="古交水泉寨"
+          path="/home_routes_news"
+          :query="{ store: 'recommend', page: 'shuiquanzhai' }"
         ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_7.png"
           text="歇马武氏宅院"
+          path="/home_routes_news"
+          :query="{ store: 'recommend', page: 'xiema' }"
         ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_8.png"
           text="石千峰文化遗址"
+          path="/home_routes_news"
+          :query="{ store: 'recommend', page: 'shiqianfeng' }"
         ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_9.png"
-          text="真能和尚灵塔s"
+          text="真能和尚灵塔"
+          path="/home_routes_news"
+          :query="{ store: 'recommend', page: 'zhenneng' }"
         ></showbox>
       </div>
     </div>
