@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="title">“寻访山西文化新名片”丨遇见古交 成为故交</div>
+    <div class="title">{{ title }}</div>
     <div class="messageArea">
       <div class="messageBox">
-        <div class="message">来源：山西晚报</div>
-        <div class="message">2023-10-30 20:41:00</div>
-        <div class="message">浏览量：6</div>
-        <div class="message">收藏量：0</div>
+        <div class="message">来源：{{ msg.from }}</div>
+        <div class="message">{{ msg.date }}</div>
+        <div class="message">浏览量：{{ msg.view }}</div>
+        <div class="message">收藏量：{{ msg.star }}</div>
       </div>
       <div class="cloudHr">
         <img
@@ -20,7 +20,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { title, msg } from "@/store/News/guide/qianfo.js";
+</script>
 
 <style scoped>
 .title {
