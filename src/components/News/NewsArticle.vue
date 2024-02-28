@@ -7,10 +7,12 @@
 </template>
 
 <script setup>
-import text from "@/store/News/guide/qianfo.js";
+import { defineProps } from "vue";
+
+const props = defineProps(["text"]);
+const text = props.text;
 //获取段落
 const paragraphs = text.split("\n").filter((p) => p.trim().length > 0);
-console.log(paragraphs);
 
 function resolveImage(paragraph) {
   // 检查段落中是否包含图片占位符

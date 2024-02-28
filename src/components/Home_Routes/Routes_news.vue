@@ -4,8 +4,13 @@
     <div class="content">
       <div class="box">
         <router-link
-          to="/home_routes_news"
-          style="text-decoration: none; color: black"
+          :to="{
+            path: '/home_routes_news',
+            query: {
+              store: 'lastNews',
+              page: 'card',
+            },
+          }"
         >
           <span>2023-10-30 20:41:00</span><br />"寻访山西文化新名片"|遇见古交
           成为故交
@@ -13,17 +18,58 @@
       </div>
 
       <div class="box">
-        <span>2023-10-25 20:39:00</span><br />古交市三座人行天桥提前完工交付使用
+        <router-link
+          :to="{
+            path: '/home_routes_news',
+            query: {
+              store: 'lastNews',
+              page: 'bridge',
+            },
+          }"
+        >
+          <span>2023-10-25 20:39:00</span
+          ><br />古交市三座人行天桥提前完工交付使用
+        </router-link>
       </div>
       <div class="box">
-        <span>2022-01-05 11:01:00</span><br />昔日火焰山 如今披绿装
+        <router-link
+          :to="{
+            path: '/home_routes_news',
+            query: {
+              store: 'lastNews',
+              page: 'fire',
+            },
+          }"
+        >
+          <span>2022-01-05 11:01:00</span><br />昔日火焰山 如今披绿装
+        </router-link>
       </div>
       <div class="box">
-        <span>2021-08-31 07:34:00</span><br />看“煤城”如何“美颜”
-        走进古交感受人居环境之变
+        <router-link
+          :to="{
+            path: '/home_routes_news',
+            query: {
+              store: 'lastNews',
+              page: 'coal',
+            },
+          }"
+        >
+          <span>2021-08-31 07:34:00</span><br />看“煤城”如何“美颜”
+          走进古交感受人居环境之变
+        </router-link>
       </div>
       <div class="box">
-        <span>2019-07-21 16:11:32</span><br />山西省古交市加速农村煤改电进程
+        <router-link
+          :to="{
+            path: '/home_routes_news',
+            query: {
+              store: 'lastNews',
+              page: 'coalToEle',
+            },
+          }"
+        >
+          <span>2019-07-21 16:11:32</span><br />山西省古交市加速农村煤改电进程
+        </router-link>
       </div>
       <div class="box more">
         <router-link to="/home_routes_news" class="link_more">更多</router-link>

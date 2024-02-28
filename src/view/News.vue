@@ -4,33 +4,33 @@
     <div class="main">
       <BreadCrumbs></BreadCrumbs>
       <div class="typeArea">
-        <NewsHeader></NewsHeader>
-        <!-- <NewsImage></NewsImage> -->
-        <NewsArticle></NewsArticle>
+        <NewsHeader :title="data.title" :msg="data.msg"></NewsHeader>
+        <NewsArticle :text="data.text"></NewsArticle>
       </div>
     </div>
     <Bottom></Bottom>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from "vue";
+
 import Header from "@/components/header.vue";
 import Bottom from "@/components/Home_Bottom/Bottom.vue";
 import BreadCrumbs from "@/components/News/BreadCrumbs.vue";
 import NewsHeader from "@/components/News/NewsHeader.vue";
-import NewsImage from "@/components/News/NewsImage.vue";
 import NewsArticle from "@/components/News/NewsArticle.vue";
 
-export default {
-  components: {
-    Header,
-    BreadCrumbs,
-    NewsHeader,
-    NewsImage,
-    NewsArticle,
-    Bottom,
-  },
-};
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+const data = ref("");
+
+import(`@/store/News/${route.query.store}/${route.query.page}.js`).then(
+  (module) => {
+    data.value = module;
+  }
+);
 </script>
 
 <style scoped>
