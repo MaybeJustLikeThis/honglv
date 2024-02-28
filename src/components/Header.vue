@@ -7,13 +7,13 @@
             src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E7%BA%A2%E4%BE%A3%E6%97%85%E8%A1%8C%E7%BD%91.png"
           />
         </div>
-        <button class="nav_box">首页</button>
-        <button class="nav_box">文化古交</button>
+        <router-link to="/home" class="nav_box">首页</router-link>
+        <router-link to="/home_routes" class="nav_box">文化古交</router-link>
         <button class="nav_box">畅游古交</button>
-        <button class="nav_box">数据中心</button>
+        <router-link to="/data" class="nav_box">数据中心</router-link>
       </div>
 
-      <div class="login">登录/注册</div>
+      <router-link to="/login" class="login">登录/注册</router-link>
     </div>
   </div>
 </template>
@@ -81,6 +81,7 @@ img {
   display: block;
   min-width: 80px;
   max-width: 80px;
+  text-decoration: none;
 }
 .nav_box:hover {
   color: black;
@@ -104,6 +105,7 @@ img {
   color: white;
   transition: 0.5s;
   min-width: 80px;
+  text-decoration: none;
 }
 
 .login:hover {

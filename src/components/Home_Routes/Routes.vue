@@ -4,20 +4,30 @@
       <div class="routes_header">
         <p>精品路线</p>
         <div class="route_flex">
-          <button class="route_flexbox x">古老古交</button>
-          <button class="route_flexbox xx">神秘古交</button>
-          <button class="route_flexbox xxx">英雄古交</button>
-          <button class="route_flexbox xxxx">夜游古交</button>
+          <router-link to="/home_routes" class="route_flexbox x"
+            >古老古交</router-link
+          >
+          <router-link to="/home_routes" class="route_flexbox xx"
+            >神秘古交</router-link
+          >
+          <router-link to="/home_routes" class="route_flexbox xxx"
+            >英雄古交</router-link
+          >
+          <router-link to="/home_routes" class="route_flexbox xxxx"
+            >夜游古交</router-link
+          >
         </div>
         <div class="ontherway">其他路线></div>
       </div>
       <div class="route_show">
         <div class="route_showbox first">
           <div class="img first">
-            <span
-              ><i>01</i> <strong>古老古交</strong
-              ><br />太原市唯一一处大型旧石器遗址</span
-            >
+            <router-link to="/home_routes" style="text-decoration: none">
+              <span
+                ><i>01</i> <strong>古老古交</strong
+                ><br />太原市唯一一处大型旧石器遗址</span
+              >
+            </router-link>
           </div>
           <div class="img second">
             <img
@@ -33,9 +43,11 @@
               alt=""
             />
           </div>
-          <span
-            ><i>02</i> <strong>神秘古交</strong
-            ><br />“龙城秘境”地处与角子崖，地理位置独特，地形地貌奇绝</span
+          <router-link to="/home_routes" style="text-decoration: none">
+            <span
+              ><i>02</i> <strong>神秘古交</strong
+              ><br />“龙城秘境”地处与角子崖，地理位置独特，地形地貌奇绝</span
+            ></router-link
           >
         </div>
         <div class="route_showbox">
@@ -45,9 +57,11 @@
               alt=""
             />
           </div>
-          <span
-            ><i>03</i> <strong>英雄古交</strong
-            ><br />晋绥八分区（专署旧址），被党中央誉为“钢铁走廊”</span
+          <router-link to="/home_routes" style="text-decoration: none">
+            <span
+              ><i>03</i> <strong>英雄古交</strong
+              ><br />晋绥八分区（专署旧址），被党中央誉为“钢铁走廊”</span
+            ></router-link
           >
         </div>
         <div class="route_showbox">
@@ -57,9 +71,11 @@
               alt=""
             />
           </div>
-          <span
-            ><i>04</i> <strong>夜游古交</strong
-            ><br />古交电厂夜景，静谧而绚烂</span
+          <router-link to="/home_routes" style="text-decoration: none">
+            <span
+              ><i>04</i> <strong>夜游古交</strong
+              ><br />古交电厂夜景，静谧而绚烂</span
+            ></router-link
           >
         </div>
       </div>
@@ -138,6 +154,7 @@ p {
   border-radius: 14px;
   transition: 0.75s;
   border: none;
+  text-decoration: none;
 }
 
 .route_flexbox.x {
