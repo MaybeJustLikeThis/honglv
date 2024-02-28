@@ -1,6 +1,12 @@
 html {
   margin: 0px;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   margin: 0px;
   height: 100%;

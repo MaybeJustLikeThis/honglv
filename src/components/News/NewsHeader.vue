@@ -10,8 +10,7 @@
       </div>
       <div class="cloudHr">
         <img
-          loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/140c3fa23f212ab58623c056bd0900455298a441c40119ee5f65d45aa2aa5c0b?apiKey=c94cf1206d5a44cea72bfa67327d7693&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/140c3fa23f212ab58623c056bd0900455298a441c40119ee5f65d45aa2aa5c0b?apiKey=c94cf1206d5a44cea72bfa67327d7693&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/140c3fa23f212ab58623c056bd0900455298a441c40119ee5f65d45aa2aa5c0b?apiKey=c94cf1206d5a44cea72bfa67327d7693&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/140c3fa23f212ab58623c056bd0900455298a441c40119ee5f65d45aa2aa5c0b?apiKey=c94cf1206d5a44cea72bfa67327d7693&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/140c3fa23f212ab58623c056bd0900455298a441c40119ee5f65d45aa2aa5c0b?apiKey=c94cf1206d5a44cea72bfa67327d7693&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/140c3fa23f212ab58623c056bd0900455298a441c40119ee5f65d45aa2aa5c0b?apiKey=c94cf1206d5a44cea72bfa67327d7693&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/140c3fa23f212ab58623c056bd0900455298a441c40119ee5f65d45aa2aa5c0b?apiKey=c94cf1206d5a44cea72bfa67327d7693&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/140c3fa23f212ab58623c056bd0900455298a441c40119ee5f65d45aa2aa5c0b?apiKey=c94cf1206d5a44cea72bfa67327d7693&"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/140c3fa23f212ab58623c056bd0900455298a441c40119ee5f65d45aa2aa5c0b?apiKey=c94cf1206d5a44cea72bfa67327d7693&"
           class="redCloud"
         />
         <hr class="redLine" />
@@ -21,7 +20,8 @@
 </template>
 
 <script setup>
-import { title, msg } from "@/store/News/guide/qianfo.js";
+import { defineProps } from "vue";
+const { title, msg } = defineProps(["title", "msg"]);
 </script>
 
 <style scoped>
