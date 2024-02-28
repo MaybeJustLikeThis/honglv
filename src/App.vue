@@ -1,9 +1,9 @@
 <template>
  
   <Home></Home>
-  <!-- <News></News>
-  <Blog></Blog>
-  <Push></Push> -->
+  <!-- <News></News> -->
+  <!-- <Blog></Blog> -->
+  <!-- <Push></Push> -->
 </template>
 
 <script>

@@ -29,10 +29,12 @@ export default {
 <style scoped>
 .bottom {
   position: relative;
+  display: block;
   top: 150px;
   background-color: #d40000;
   width: 100%;
   height: 300px;
+  min-width: 1200px;
 }
 .copyright {
   /* background-color: tomato; */

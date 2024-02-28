@@ -27,6 +27,8 @@ export default {};
   background-color: #7f0505;
   width: 100%;
   height: 120px;
+  min-width: 1200px;
+  /* position: fixed; */
 }
 .nav {
   background-color: #d40000;
@@ -37,6 +39,8 @@ export default {};
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  min-width: 1200px;
+  /* max-width: 1800px; */
 }
 .nav_logo {
   background-color: #d40000;
@@ -47,12 +51,15 @@ export default {};
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  min-height: 80px;
+  min-width: 900px;
 }
 .logo {
   background-color: #d40000;
   position: relative;
   bottom: 40px;
   height: 120px;
+  min-width: 120px;
   /* width:58px; */
   flex: 0 1 auto;
 }
@@ -68,13 +75,16 @@ img {
   text-align: center;
   line-height: 80px;
   color: white;
-  /* border-radius: 25%; */
   border: none;
   transition: 0.75s;
+  overflow: hidden;
+  display: block;
+  min-width: 80px;
+  max-width: 80px;
 }
 .nav_box:hover {
   color: black;
-  box-shadow: 0px 20px 20px #712020;
+  box-shadow: 0px 10px 10px #712020;
   border-radius: 25%;
   animation-fill-mode: forwards;
 }
@@ -93,6 +103,7 @@ img {
   line-height: 80px;
   color: white;
   transition: 0.5s;
+  min-width: 80px;
 }
 
 .login:hover {
