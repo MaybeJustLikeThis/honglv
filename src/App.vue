@@ -1,8 +1,8 @@
 <template>
   <!-- <login></login> -->
-  <!-- <Home></Home> -->
-  <Temp></Temp>
-  <!-- <news></news> -->
+  <Home></Home>
+  <!-- <Temp></Temp> -->
+  <news></news>
   <!-- <Blog></Blog> -->
   <!-- <Push></Push> -->
 </template>
