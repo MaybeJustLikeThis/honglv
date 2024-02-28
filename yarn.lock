@@ -73,6 +73,14 @@
   "resolved" "https://registry.npmmirror.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz"
   "version" "1.4.15"
 
+"@jsdawn/vue3-tinymce@^2.0.4":
+  "integrity" "sha512-2s9RdeivIIrJQ4pDbS8DgpnL2Nmiojzjuj1AQKWERd891JULSlJbf8HAxY8OIVXIrQYh9vBvPG4orwFxswZCjw=="
+  "resolved" "https://registry.npmjs.org/@jsdawn/vue3-tinymce/-/vue3-tinymce-2.0.4.tgz"
+  "version" "2.0.4"
+  dependencies:
+    "vue" "^3.2.6"
+    "vue-router" "4"
+
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
   "resolved" "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -1321,7 +1329,7 @@
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-"vue@^3.2.0", "vue@^3.2.25", "vue@^3.3.4", "vue@3.3.8":
+"vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.6", "vue@^3.3.4", "vue@3.3.8":
   "integrity" "sha512-5VSX/3DabBikOXMsxzlW8JyfeLKlG9mzqnWgLQLty88vdZL7ZJgrdgBOmrArwxiLtmS+lNNpPcBYqrhE6TQW5w=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.3.8.tgz"
   "version" "3.3.8"

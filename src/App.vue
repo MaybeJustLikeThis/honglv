@@ -1,5 +1,4 @@
 <template>
- 
   <Home></Home>
   <!-- <News></News> -->
   <!-- <Blog></Blog> -->
