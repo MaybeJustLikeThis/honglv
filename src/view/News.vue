@@ -40,7 +40,7 @@ import(`@/store/News/${route.query.store}/${route.query.page}.js`).then(
   align-items: center;
   background-color: #fff;
   display: flex;
-  padding-top: 43px;
+  /* padding-top: 43px; */
   flex-direction: column;
 }
 </style>

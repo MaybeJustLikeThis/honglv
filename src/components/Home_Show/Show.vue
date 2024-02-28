@@ -7,6 +7,10 @@
           class="first"
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2032.png"
           text="景区"
+          path="/home_show"
+          :query="{
+            xxxx: 2222,
+          }"
         ></showbox>
 
         <showbox
