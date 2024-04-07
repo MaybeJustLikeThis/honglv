@@ -82,6 +82,7 @@ img {
   min-width: 80px;
   max-width: 80px;
   text-decoration: none;
+  /* outline: none; */
 }
 .nav_box:hover {
   color: black;
@@ -106,6 +107,7 @@ img {
   transition: 0.5s;
   min-width: 80px;
   text-decoration: none;
+  /* outline: none; */
 }
 
 .login:hover {

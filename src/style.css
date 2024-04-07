@@ -1,5 +1,6 @@
 html {
   margin: 0px;
+  background-color: #ffffff;
 }
 
 a {
@@ -14,4 +15,9 @@ body {
   min-height: 100%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  background-color: #b83636;
+  background-color: #ffffff;
+}
+*:focus-within {
+  outline: rgb(182, 68, 53);
 }

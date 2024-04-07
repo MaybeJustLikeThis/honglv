@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import beautySpot from "@/data/beautySpot.js"
+import beautySpot from "@/store/Rank/beautySpot.js"
 export default {
     data:function(){
         return{
