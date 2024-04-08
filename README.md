@@ -17,11 +17,11 @@
 │  │  │      公共样式.css
 │  │  │  
 │  │  └─components # 组件文件目录
-│  │ 	│				│
+│  │  │	      │
 │  │  │     Home # 组件每个网页的目录
-│  │  │				│
-│	 │  │       └─Home_Header.vue # 组件名   
-│	 │  │  
+│  │  │	      │
+│  │  │       └─Home_Header.vue # 组件名   
+│  │  │  
 │  │  └─router # 路由文件目录 
 │  │  │		index.js
 │  │  │
@@ -29,7 +29,7 @@
 │  │  │		
 │  │  │
 │  │  └─view # 页面文件目录
-│  │		│
+│  │    │
 │  │    └─Home.vue # 首页	
 │  │ .gitignore
 │  │ index.html # Vite项目的入口文件
