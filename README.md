@@ -10,23 +10,32 @@
 │  │  ├─assets # 资源文件目录
 │  │  │      logo.png
 │  │  │
+│  │  ├─lib # 公共组件文件目录
+│  │  │      公共组件
+│  │  │  
+│  │  ├─style # 公共样式文件目录
+│  │  │      公共样式.css
+│  │  │  
 │  │  └─components # 组件文件目录
-│  │  │     HelloWorld.vue
-│  │  │
-│  │  └─router #路由文件目录 
+│  │ 	│				│
+│  │  │     Home # 组件每个网页的目录
+│  │  │				│
+│	 │  │       └─Home_Header.vue # 组件名   
+│	 │  │  
+│  │  └─router # 路由文件目录 
 │  │  │		index.js
 │  │  │
-│  │  └─store #数据格式文件目录
+│  │  └─store # 数据格式文件目录
 │  │  │		
 │  │  │
-│  │  └─view #页面文件目录
+│  │  └─view # 页面文件目录
+│  │		│
+│  │    └─Home.vue # 首页	
 │  │ .gitignore
 │  │ index.html # Vite项目的入口文件
 │  │ package.json
 │  │ README.md
-│  │ tsconfig.json # tsconfig配置文件
 │  │ vite.config.js # vite配置文件
-
 ```
 
 本项目是一个基于 Vite3 搭建的 Vue3 项目模板，集成了JavaScript、Vue Router、Axios、ESLint
