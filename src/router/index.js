@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 import Home from "../view/Home.vue";
-import Data from "../components/Home-Data/data.vue";
+import Data from "../view/DataCenter.vue";
 import Routes from "../components/Home_routes(xjb)/routes.vue";
 import Login from "../view/login.vue";
 import Home_routes from "../components/Home_routes(xjb)/routes.vue";

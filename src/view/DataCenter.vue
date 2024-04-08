@@ -1,5 +1,4 @@
 <template>
-
   <Header></Header>
   <div class="all">
     <div class="navigator">
@@ -61,13 +60,8 @@
 
 <script setup>
 import * as echarts from "echarts";
-import Header from "@/components/header.vue";
-import Carousel from "@/components/Carousel.vue";
-import Routes from "../Home_Routes/Routes.vue";
-import Bottom from "../Home_Bottom/Bottom.vue";
-import Show from "../Home_Show/Show.vue";
-import Show_hot from "../Home_Show/Show_hot.vue";
-import Show_str from "../Home_Show/Show_strategy.vue";
+import Header from "@/libs/header.vue";
+import Bottom from "@/libs/Home_Bottom/Bottom.vue";
 
 import { onMounted, ref } from "vue";
 const mychart = ref();

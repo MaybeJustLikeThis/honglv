@@ -9,7 +9,7 @@
           text="角子崖"
           path="/home_routes_news"
           :query="{ store: 'recommend', page: 'jiaoziya' }"
-          ></showbox>
+        ></showbox>
         <showbox
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/hot_2.png"
           text="吕梁山"
@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import showbox from "../showbox.vue";
+import showbox from "@/components/showbox.vue";
 export default {
   components: {
     showbox,

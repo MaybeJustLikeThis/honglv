@@ -15,8 +15,8 @@
 <script setup>
 import { ref } from "vue";
 
-import Header from "@/components/header.vue";
-import Bottom from "@/components/Home_Bottom/Bottom.vue";
+import Header from "@/libs/header.vue";
+import Bottom from "@/libs/Home_Bottom/Bottom.vue";
 import BreadCrumbs from "@/components/News/BreadCrumbs.vue";
 import NewsHeader from "@/components/News/NewsHeader.vue";
 import NewsArticle from "@/components/News/NewsArticle.vue";

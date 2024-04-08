@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import showbox from "../showbox.vue";
+import showbox from "@/components/showbox.vue";
 export default {
   components: {
     showbox,
