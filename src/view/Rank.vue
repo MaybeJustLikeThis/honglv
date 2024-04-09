@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <Header></Header>
+    <!-- <Header></Header> -->
     <div class="container">
       <div class="rank">
         <ConcreteRank></ConcreteRank>
@@ -12,7 +12,7 @@
         页
       </div>
     </div>
-    <Bottom></Bottom>
+    <!-- <Bottom></Bottom> -->
   </div>
 </template>
 

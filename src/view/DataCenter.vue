@@ -1,5 +1,5 @@
 <template>
-  <Header></Header>
+  <!-- <Header></Header> -->
   <div class="all">
     <div class="navigator">
       <div class="div-14">首页</div>
@@ -55,7 +55,7 @@
     </div>
   </div>
 
-  <Bottom></Bottom>
+  <!-- <Bottom></Bottom> -->
 </template>
 
 <script setup>

@@ -7,10 +7,10 @@
             src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E7%BA%A2%E4%BE%A3%E6%97%85%E8%A1%8C%E7%BD%91.png"
           />
         </div>
-        <router-link to="/home" class="nav_box">首页</router-link>
-        <router-link to="/home_routes" class="nav_box">文化古交</router-link>
-        <router-link to="/home_show" class="nav_box">畅游古交</router-link>
-        <router-link to="/data" class="nav_box">数据中心</router-link>
+        <router-link to="/honglv/home" class="nav_box">首页</router-link>
+        <router-link to="/honglv/blog" class="nav_box">文化古交</router-link>
+        <router-link to="/honglv/show" class="nav_box">畅游古交</router-link>
+        <router-link to="/honglv/data" class="nav_box">数据中心</router-link>
       </div>
 
       <router-link to="/login" class="login">登录/注册</router-link>

@@ -1,11 +1,11 @@
 <template>
   <div class="root">
-    <Header></Header>
+    <!-- <Header></Header> -->
     <div class="container">
       <Uploading></Uploading>
       <Push></Push>
     </div>
-    <Bottom></Bottom>
+    <!-- <Bottom></Bottom> -->
   </div>
 </template>
 
