@@ -4,7 +4,7 @@
       <div class="title">—————— 旅游向导 ——————</div>
       <div class="shower">
         <showbox
-          class="first"
+          class="box first"
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2032.png"
           text="景区"
           path="/home_show"
@@ -12,16 +12,13 @@
             xxxx: 2222,
           }"
         ></showbox>
-
         <showbox
-          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2033.png"
-          text="线路"
-        ></showbox>
-        <showbox
+          class="box"
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2034.png"
           text="美食"
         ></showbox>
         <showbox
+          class="box"
           img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2035.png"
           text="酒店"
           path="/home_show_hotel"
@@ -30,8 +27,9 @@
           }"
         ></showbox>
         <showbox
-          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2036.png"
-          text="购物"
+          class="box"
+          img_src="../../../../public/home/文创.png"
+          text="文创"
         ></showbox>
       </div>
     </div>
@@ -89,15 +87,17 @@ export default {
   position: relative;
   top: 0%;
   width: 100%;
-  height: 75%;
+  height: 70%;
 }
 
-.first {
-  /* flex-grow: 2; */
+.box.first {
+  flex-grow: 1;
   background-color: lightgoldenrodyellow;
 }
+.box {
+  width: 300px;
+}
 .box:hover {
-  /* animation: fly 0.75s; */
   animation-fill-mode: forwards;
   transform: translateY(-20px);
   flex: 40%;

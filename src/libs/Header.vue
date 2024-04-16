@@ -2,14 +2,16 @@
   <div class="header">
     <div class="nav">
       <div class="nav_logo">
-        <div class="logo">
-          <img
-            src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E7%BA%A2%E4%BE%A3%E6%97%85%E8%A1%8C%E7%BD%91.png"
-          />
-        </div>
+        <router-link to="/honglv/home" class="logo-link">
+          <div class="logo">
+            <img
+              src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E7%BA%A2%E4%BE%A3%E6%97%85%E8%A1%8C%E7%BD%91.png"
+            />
+          </div>
+        </router-link>
         <router-link to="/honglv/home" class="nav_box">首页</router-link>
-        <router-link to="/honglv/blog" class="nav_box">文化古交</router-link>
-        <router-link to="/honglv/show" class="nav_box">畅游古交</router-link>
+        <router-link to="/honglv/blog" class="nav_box">上传</router-link>
+        <router-link to="/honglv/show" class="nav_box">搜索</router-link>
         <router-link to="/honglv/data" class="nav_box">数据中心</router-link>
       </div>
 
@@ -28,8 +30,8 @@ export default {};
   width: 100%;
   height: 120px;
   min-width: 1200px;
-  /* position: fixed; */
 }
+
 .nav {
   background-color: #d40000;
   position: relative;
@@ -40,8 +42,8 @@ export default {};
   flex-direction: row;
   justify-content: space-around;
   min-width: 1200px;
-  /* max-width: 1800px; */
 }
+
 .nav_logo {
   background-color: #d40000;
   position: relative;
@@ -54,14 +56,18 @@ export default {};
   min-height: 80px;
   min-width: 900px;
 }
+
 .logo {
   background-color: #d40000;
   position: relative;
   bottom: 40px;
   height: 120px;
   min-width: 120px;
-  /* width:58px; */
-  flex: 0 1 auto;
+}
+
+.logo-link:active {
+  transform: scale(0.9);
+  transition: 0.25s;
 }
 img {
   height: 100%;
@@ -82,12 +88,10 @@ img {
   min-width: 80px;
   max-width: 80px;
   text-decoration: none;
-  /* outline: none; */
 }
+
 .nav_box:hover {
   color: black;
-  /* box-shadow: 0px 10px 10px #712020; */
-  /* border-radius: 25%; */
   animation-fill-mode: forwards;
 }
 
@@ -95,8 +99,8 @@ img {
   background-color: blanchedalmond;
   transition: 0.5s;
 }
+
 .login {
-  /* background-color: beige; */
   position: relative;
   right: 50px;
   width: 9%;
@@ -107,7 +111,6 @@ img {
   transition: 0.5s;
   min-width: 80px;
   text-decoration: none;
-  /* outline: none; */
 }
 
 .login:hover {

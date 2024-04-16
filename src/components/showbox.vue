@@ -24,7 +24,7 @@ const props = defineProps(["img_src", "text", "path", "query"]);
   margin: 10px;
   margin-bottom: 0px;
   margin-top: 10px;
-  /* background-color: lightcoral; */
+
   border-radius: 25px;
   transition: all 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 

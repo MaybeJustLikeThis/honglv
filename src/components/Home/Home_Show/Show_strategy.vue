@@ -4,21 +4,22 @@
       <div class="title">—————— 游记攻略 ——————</div>
       <div class="title xx"><i>背包，相机，目的地， 下一站，我不告诉你</i></div>
       <div class="shower">
-        <showbox
-          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/001.png"
-          text="县（市）级 文物保护单位"
-        ></showbox>
+        <showbox v-for="item in items"></showbox>
 
         <showbox
-          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/002.png"
+          img_src="../../../../public/home/游记1.png"
+          text="县（市）级 文物保护单位"
+        ></showbox>
+        <showbox
+          img_src="../../../../public/home/游记2.png"
           text="“西山晓月” 夜景灯光"
         ></showbox>
         <showbox
-          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/004.png"
+          img_src="../../../../public/home/游记3.png"
           text="龙城向新生态恢复示范园"
         ></showbox>
         <showbox
-          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/003.png"
+          img_src="../../../../public/home/游记4.png"
           text="&nbsp&nbsp&nbsp两川相夹 &nbsp&nbsp&nbsp背山临水"
         ></showbox>
       </div>
@@ -85,7 +86,7 @@ export default {
 .box {
   margin-top: 0px;
   border-radius: 50%;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 :deep(.po) {
   background: #ffffff00;

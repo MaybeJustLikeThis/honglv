@@ -3,7 +3,6 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Routes from "../components/Home_routes(xjb)/routes.vue";
 import Home_routes from "../components/Home_routes(xjb)/routes.vue";
 import Home_routes_news from "../view/News.vue";
-
 import home_show_hotel from "../view/Rank_2.vue";
 const router = createRouter({
   history: createWebHashHistory(),
@@ -13,10 +12,13 @@ const router = createRouter({
       redirect: "/honglv/home",
     },
     {
+      path: "/",
+      redirect: "/honglv/home",
+    },
+    {
       path: "/:pathMatch(.*)",
       component: () => import("@/view/Alert.vue"),
     },
-
     {
       path: "/honglv",
       component: () => import("@/view/Home.vue"),
