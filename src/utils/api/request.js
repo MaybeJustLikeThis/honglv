@@ -1,4 +1,8 @@
-/****   request.js   ****/
+/****   request.js
+ *  李建霆
+ *  2024/4/17
+ *    ****/
+
 // 导入axios
 import axios from "axios";
 
@@ -11,6 +15,7 @@ const service = axios.create({
   timeout: 3 * 1000,
   responseType: "json",
 });
+
 //2.请求拦截器
 service.interceptors.request.use(
   (config) => {

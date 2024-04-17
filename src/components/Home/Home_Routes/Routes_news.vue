@@ -1,3 +1,8 @@
+<!-- 首页-路线-新闻模块
+  李建霆
+  2024/4/17
+-->
+
 <template>
   <div class="news">
     <div class="header"><p>最新资讯</p></div>
@@ -78,9 +83,7 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<script setup></script>
 
 <style scoped>
 .news {

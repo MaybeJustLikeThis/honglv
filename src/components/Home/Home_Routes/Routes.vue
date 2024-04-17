@@ -1,3 +1,8 @@
+<!-- 首页-路线模块
+  李建霆
+  2024/4/17
+-->
+
 <template>
   <div class="box">
     <div class="routes">
@@ -84,16 +89,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Routes_news from "./Routes_news.vue";
-export default {
-  data() {
-    return {};
-  },
-  components: {
-    Routes_news,
-  },
-};
 </script>
 
 <style scoped>
