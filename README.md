@@ -44,4 +44,5 @@
 node版本：18.12.1
 vue：3.3.4
 vite:4.5.1
+element-plus: ^2.7.0
 
