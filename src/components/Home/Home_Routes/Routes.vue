@@ -8,22 +8,21 @@
     <div class="routes">
       <div class="routes_header">
         <p>精品路线</p>
+
         <div class="route_flex">
-          <router-link to="/home_routes" class="route_flexbox x"
-            >古老古交</router-link
-          >
-          <router-link to="/home_routes" class="route_flexbox xx"
-            >神秘古交</router-link
-          >
-          <router-link to="/home_routes" class="route_flexbox xxx"
-            >英雄古交</router-link
-          >
-          <router-link to="/home_routes" class="route_flexbox xxxx"
-            >夜游古交</router-link
-          >
+          <template v-for="route in routes_headerList">
+            <router-link
+              :to="route.to"
+              :class="['route_flexbox', route.className]"
+            >
+              {{ route.label }}
+            </router-link>
+          </template>
         </div>
-        <div class="ontherway">其他路线></div>
+
+        <div class="ontherway">其他路线>></div>
       </div>
+
       <div class="route_show">
         <div class="route_showbox first">
           <div class="img first">
@@ -91,6 +90,29 @@
 
 <script setup>
 import Routes_news from "./Routes_news.vue";
+import { ref } from "vue";
+let routes_headerList = ref([
+  {
+    to: "/home_routes",
+    className: "x",
+    label: "古老古交",
+  },
+  {
+    to: "/home_routes",
+    className: "xx",
+    label: "神秘古交",
+  },
+  {
+    to: "/home_routes",
+    className: "xxx",
+    label: "英雄古交",
+  },
+  {
+    to: "/home_routes",
+    className: "xxxx",
+    label: "夜游古交",
+  },
+]);
 </script>
 
 <style scoped>
@@ -144,7 +166,6 @@ p {
   height: 60%;
   position: relative;
   top: 20%;
-  /* background-color: blueviolet; */
   font-size: 16px;
   line-height: 200%;
   text-align: center;
@@ -153,31 +174,11 @@ p {
   border: none;
   text-decoration: none;
 }
-
 .route_flexbox.x {
   background-color: #ffd700;
   color: #af9404;
 }
-.route_flexbox.x:hover {
-  color: black;
-  box-shadow: 3px 3px 3px 3px #681717;
-  animation-fill-mode: forwards;
-}
-.route_flexbox.xx:hover {
-  color: black;
-  box-shadow: 3px 3px 3px 3px #681717;
-  animation-fill-mode: forwards;
-}
-.route_flexbox.xxx:hover {
-  color: black;
-  box-shadow: 3px 3px 3px 3px #681717;
-  animation-fill-mode: forwards;
-}
-.route_flexbox.xxxx:hover {
-  color: black;
-  box-shadow: 3px 3px 3px 3px #681717;
-  animation-fill-mode: forwards;
-}
+
 .route_flexbox.xx {
   background-color: #00bfff;
   color: #0482ac;
@@ -187,9 +188,28 @@ p {
   background-color: #9acd32;
   color: #638322;
 }
+
 .route_flexbox.xxxx {
   background-color: #48d1cc;
   color: #338582;
+}
+.route_flexbox:hover {
+  color: black;
+  box-shadow: 3px 3px 3px 3px #681717;
+  animation-fill-mode: forwards;
+}
+.route_flexbox:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.route_flexbox:hover:before {
+  opacity: 0.2;
 }
 .ontherway {
   position: relative;
@@ -199,6 +219,7 @@ p {
   font-size: 14px;
   line-height: 400%;
   font-style: italic;
+  cursor: pointer;
 }
 .route_show {
   display: flex;

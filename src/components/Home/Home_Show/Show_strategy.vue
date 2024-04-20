@@ -31,9 +31,8 @@
   </div>
 </template>
 
-<script setup >
+<script setup>
 import showbox from "@/components/showbox.vue";
-
 </script>
 
 <style scoped>
