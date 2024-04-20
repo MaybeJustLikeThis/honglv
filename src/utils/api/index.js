@@ -14,4 +14,10 @@ function postLogin(params) {
     data: params,
   });
 }
-export { getLogin, postLogin };
+function getHomeTOPRoute() {
+  return request({
+    url: "/rounte/getTopRounte",
+    method: "get",
+  });
+}
+export { getLogin, postLogin, getHomeTOPRoute };

@@ -6,9 +6,9 @@
 <template>
   <div class="box">
     <div class="routes">
+      <!-- 头部 -->
       <div class="routes_header">
         <p>精品路线</p>
-
         <div class="route_flex">
           <template v-for="route in routes_headerList">
             <router-link
@@ -19,68 +19,32 @@
             </router-link>
           </template>
         </div>
-
         <div class="ontherway">其他路线>></div>
       </div>
-
+      <!-- 内容部分 -->
       <div class="route_show">
-        <div class="route_showbox first">
-          <div class="img first">
-            <router-link to="/home_routes" style="text-decoration: none">
-              <span
-                ><i>01</i> <strong>古老古交</strong
-                ><br />太原市唯一一处大型旧石器遗址</span
-              >
-            </router-link>
+        <!-- 使用 v-for 遍历 routes 数组 -->
+        <div
+          class="route_showbox"
+          v-for="(route, index) in TopRoutes"
+          :key="route.id"
+          :class="{ first: index === 0 }"
+        >
+          <!-- 添加 first 类来特殊处理第一个 route_showbox 元素 -->
+          <div class="img" :class="{ first: index === 0 }">
+            <img :src="route.image" alt="" />
           </div>
-          <div class="img second">
-            <img
-              src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Subtract.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="route_showbox">
-          <div class="img">
-            <img
-              src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2025.png"
-              alt=""
-            />
-          </div>
-          <router-link to="/home_routes" style="text-decoration: none">
-            <span
-              ><i>02</i> <strong>神秘古交</strong
-              ><br />“龙城秘境”地处与角子崖，地理位置独特，地形地貌奇绝</span
-            ></router-link
+          <router-link
+            :to="route.to"
+            class="route_link"
+            style="text-decoration: none"
           >
-        </div>
-        <div class="route_showbox">
-          <div class="img">
-            <img
-              src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/26.png"
-              alt=""
-            />
-          </div>
-          <router-link to="/home_routes" style="text-decoration: none">
-            <span
-              ><i>03</i> <strong>英雄古交</strong
-              ><br />晋绥八分区（专署旧址），被党中央誉为“钢铁走廊”</span
-            ></router-link
-          >
-        </div>
-        <div class="route_showbox">
-          <div class="img">
-            <img
-              src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/27.png"
-              alt=""
-            />
-          </div>
-          <router-link to="/home_routes" style="text-decoration: none">
-            <span
-              ><i>04</i> <strong>夜游古交</strong
-              ><br />古交电厂夜景，静谧而绚烂</span
-            ></router-link
-          >
+            <span>
+              <i>{{ route.number }}</i> <strong>{{ route.title }}</strong
+              ><br />
+              {{ route.summary }}
+            </span>
+          </router-link>
         </div>
       </div>
     </div>
@@ -90,7 +54,43 @@
 
 <script setup>
 import Routes_news from "./Routes_news.vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { getHomeTOPRoute } from "@/utils/api/index.js";
+const routes = ref();
+const TopRoutes = ref([
+  {
+    id: 1,
+    image: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Subtract.png",
+    to: "/home_routes",
+    number: "01",
+    title: "古老古交",
+    summary: "太原市唯一一处大型旧石器遗址",
+  },
+  {
+    id: 2,
+    image: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2025.png",
+    to: "/home_routes",
+    number: "02",
+    title: "神秘古交",
+    summary: "“龙城秘境”地处与角子崖，地理位置独特，地形地貌奇绝",
+  },
+  {
+    id: 3,
+    image: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/26.png",
+    to: "/home_routes",
+    number: "03",
+    title: "英雄古交",
+    summary: "晋绥八分区（专署旧址），被党中央誉为“钢铁走廊”",
+  },
+  {
+    id: 4,
+    image: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/27.png",
+    to: "/home_routes",
+    number: "04",
+    title: "夜游古交",
+    summary: "古交电厂夜景，静谧而绚烂",
+  },
+]);
 let routes_headerList = ref([
   {
     to: "/home_routes",
@@ -113,16 +113,18 @@ let routes_headerList = ref([
     label: "夜游古交",
   },
 ]);
+
+onMounted(() => {
+  routes.value = getHomeTOPRoute();
+
+  console.log(routes.value);
+});
 </script>
 
 <style scoped>
 .box {
   position: relative;
   top: 50px;
-  /* left: 18%; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%); */
   width: 1050px;
   height: 400px;
   min-height: 400px;
@@ -133,7 +135,7 @@ let routes_headerList = ref([
 }
 .routes {
   position: relative;
-  /* background-color: greenyellow; */
+
   width: 70%;
   height: 400px;
 }
@@ -153,7 +155,6 @@ p {
   font-size: 20px;
 }
 .route_flex {
-  /* background-color: blanchedalmond; */
   position: relative;
   width: 56%;
   height: 100%;
@@ -228,8 +229,8 @@ p {
   position: relative;
   width: 100%;
   height: 90%;
-  /* background-color: turquoise; */
 }
+
 .route_showbox {
   position: relative;
   width: 64%;
@@ -240,15 +241,17 @@ p {
   border-bottom-color: #c9c8c8;
   display: flex;
 }
+
 .route_showbox.first {
   flex: none;
   height: 100%;
   width: 36%;
-  background-color: yellowgreen;
+  background-color: #ffe4e4;
   border: none;
   display: flex;
   flex-direction: column;
 }
+
 .img {
   position: relative;
   width: 30%;
@@ -256,23 +259,29 @@ p {
   background-color: teal;
   margin: 10px;
 }
+
 .img.first {
   position: relative;
   width: 100%;
-  height: 33%;
-  margin: 0px;
+  height: 70%;
+  margin: 0px; /* 修改 */
+  margin-top: 18.8%;
   background-color: #ffe4e4;
+  order: 2;
 }
+
 .img.second {
   position: relative;
   width: 100%;
   margin: 0;
   background-color: #ffe4e4;
 }
+
 img {
   max-width: 100%;
   height: 100%;
 }
+
 span {
   position: relative;
   max-width: 60%;
@@ -282,11 +291,13 @@ span {
   font-size: 13px;
   color: #666666;
 }
+
 i {
   color: #d40000;
   font-size: 27px;
   font-style: serif;
 }
+
 strong {
   font-size: 18px;
   color: black;
