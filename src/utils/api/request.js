@@ -9,8 +9,7 @@ import axios from "axios";
 //1. 创建新的axios实例，
 const service = axios.create({
   // 公共接口
-  baseURL:
-    process.env.NODE_ENV == "production" ? "/" : "http://localhost:5173/",
+  baseURL: "http://39.105.232.187:8080",
   // 超时时间 单位是ms，这里设置了3s的超时时间
   timeout: 3 * 1000,
   responseType: "json",
@@ -26,10 +25,13 @@ service.interceptors.request.use(
     };
 
     const token = localStorage.getItem("token"); //这里取token之前，你肯定需要先拿到token,存一下
+    // console.log(token);
+
     if (token) {
       //config.params = {'token':token} //如果要求携带在参数中
       config.headers.token = token; //如果要求携带在请求头中
     }
+    console.log(config.headers);
     return config;
   },
   (err) => {

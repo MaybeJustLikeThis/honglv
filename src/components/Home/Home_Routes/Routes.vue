@@ -55,7 +55,8 @@
 <script setup>
 import Routes_news from "./Routes_news.vue";
 import { ref, onMounted } from "vue";
-import { getHomeTOPRoute } from "@/utils/api/index.js";
+import { getHomeTOPRoute, getRouteInfo } from "@/utils/api/index.js";
+import axios from "axios";
 const routes = ref();
 const TopRoutes = ref([
   {
@@ -115,9 +116,11 @@ let routes_headerList = ref([
 ]);
 
 onMounted(() => {
-  routes.value = getHomeTOPRoute();
-
-  console.log(routes.value);
+  getHomeTOPRoute().then((res) => {
+    routes.value = res.data;
+    console.log(res.data); // 打印出接口返回的routes数据
+   
+  });
 });
 </script>
 

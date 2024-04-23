@@ -11,7 +11,7 @@
         </router-link>
         <router-link to="/honglv/home" class="nav_box">首页</router-link>
         <router-link to="/honglv/blog" class="nav_box">上传</router-link>
-        <router-link to="/honglv/show" class="nav_box">搜索</router-link>
+        <router-link to="/honglv/search" class="nav_box">搜索</router-link>
         <router-link to="/honglv/data" class="nav_box">数据中心</router-link>
       </div>
 
@@ -67,8 +67,10 @@ export default {};
 
 .logo-link:active {
   transform: scale(0.9);
-  transition: 0.25s;
+
+  transition: transform 0.25s ease-in-out;
 }
+
 img {
   height: 100%;
   width: 100%;

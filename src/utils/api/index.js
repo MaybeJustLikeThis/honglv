@@ -20,4 +20,11 @@ function getHomeTOPRoute() {
     method: "get",
   });
 }
-export { getLogin, postLogin, getHomeTOPRoute };
+function getRouteInfo(args) {
+  return request({
+    url: "/rounte/getHomeRounte",
+    method: "get",
+    query: args,
+  });
+}
+export { getLogin, postLogin, getHomeTOPRoute, getRouteInfo };

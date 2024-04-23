@@ -37,7 +37,7 @@ const items = ref([
   },
   {
     img_src: "../../../../public/home/游记4.png",
-    text: "&nbsp&nbsp&nbsp两川相夹 &nbsp&nbsp&nbsp背山临水",
+    text: "两川相夹 背山临水",
   },
 ]);
 </script>
