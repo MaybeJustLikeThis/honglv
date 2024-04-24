@@ -33,8 +33,8 @@ const router = createRouter({
           component: () => import("@/components/Home/Home_content.vue"),
         },
         {
-          path: "show",
-          component: () => import("@/view/Rank.vue"),
+          path: "search",
+          component: () => import("@/view/Search.vue"),
         },
         {
           path: "data",

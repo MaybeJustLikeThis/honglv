@@ -1,76 +1,28 @@
+<!-- 首页-路线-新闻模块
+  李建霆
+  2024/4/17
+-->
+
 <template>
   <div class="news">
     <div class="header"><p>最新资讯</p></div>
     <div class="content">
-      <div class="box">
+      <div class="box" v-for="article in articles" :key="article.id">
         <router-link
           :to="{
             path: '/home_routes_news',
             query: {
               store: 'lastNews',
-              page: 'card',
+              page: article.page,
             },
           }"
         >
-          <span>2023-10-30 20:41:00</span><br />"寻访山西文化新名片"|遇见古交
-          成为故交
+          <span>{{ article.creatTime }}</span
+          ><br />
+          {{ article.title }}
         </router-link>
       </div>
 
-      <div class="box">
-        <router-link
-          :to="{
-            path: '/home_routes_news',
-            query: {
-              store: 'lastNews',
-              page: 'bridge',
-            },
-          }"
-        >
-          <span>2023-10-25 20:39:00</span
-          ><br />古交市三座人行天桥提前完工交付使用
-        </router-link>
-      </div>
-      <div class="box">
-        <router-link
-          :to="{
-            path: '/home_routes_news',
-            query: {
-              store: 'lastNews',
-              page: 'fire',
-            },
-          }"
-        >
-          <span>2022-01-05 11:01:00</span><br />昔日火焰山 如今披绿装
-        </router-link>
-      </div>
-      <div class="box">
-        <router-link
-          :to="{
-            path: '/home_routes_news',
-            query: {
-              store: 'lastNews',
-              page: 'coal',
-            },
-          }"
-        >
-          <span>2021-08-31 07:34:00</span><br />看“煤城”如何“美颜”
-          走进古交感受人居环境之变
-        </router-link>
-      </div>
-      <div class="box">
-        <router-link
-          :to="{
-            path: '/home_routes_news',
-            query: {
-              store: 'lastNews',
-              page: 'coalToEle',
-            },
-          }"
-        >
-          <span>2019-07-21 16:11:32</span><br />山西省古交市加速农村煤改电进程
-        </router-link>
-      </div>
       <div class="box more">
         <router-link to="/home_routes_news" class="link_more">更多</router-link>
       </div>
@@ -78,8 +30,40 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+import { ref } from "vue";
+const articles = ref([
+  {
+    id: 1,
+    creatTime: "2023-10-30 20:41:00",
+    title: '"寻访山西文化新名片"|遇见古交成为故交',
+    page: "card",
+  },
+  {
+    id: 2,
+    creatTime: "2023-10-25 20:39:00",
+    title: "古交市三座人行天桥提前完工交付使用",
+    page: "bridge",
+  },
+  {
+    id: 3,
+    creatTime: "2022-01-05 11:01:00",
+    title: "昔日火焰山 如今披绿装",
+    page: "fire",
+  },
+  {
+    id: 4,
+    creatTime: "2021-08-31 07:34:00",
+    title: "看“煤城”如何“美颜” 走进古交感受人居环境之变",
+    page: "coal",
+  },
+  {
+    id: 5,
+    creatTime: "2019-07-21 16:11:32",
+    title: "山西省古交市加速农村煤改电进程",
+    page: "coalToEle",
+  },
+]);
 </script>
 
 <style scoped>

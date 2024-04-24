@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@jsdawn/vue3-tinymce": "^2.0.4",
+    "axios": "^1.6.8",
     "echarts": "^5.5.0",
+    "element-plus": "^2.7.0",
     "vue": "^3.3.4",
     "vue-router": "4"
   },

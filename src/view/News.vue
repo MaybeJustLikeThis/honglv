@@ -20,7 +20,6 @@ import Bottom from "@/libs/Home_Bottom/Bottom.vue";
 import BreadCrumbs from "@/components/News/BreadCrumbs.vue";
 import NewsHeader from "@/components/News/NewsHeader.vue";
 import NewsArticle from "@/components/News/NewsArticle.vue";
-
 import { useRoute } from "vue-router";
 
 const route = useRoute();

@@ -1,82 +1,50 @@
+<!-- 首页-路线模块
+  李建霆
+  2024/4/17
+-->
+
 <template>
   <div class="box">
     <div class="routes">
+      <!-- 头部 -->
       <div class="routes_header">
         <p>精品路线</p>
         <div class="route_flex">
-          <router-link to="/home_routes" class="route_flexbox x"
-            >古老古交</router-link
-          >
-          <router-link to="/home_routes" class="route_flexbox xx"
-            >神秘古交</router-link
-          >
-          <router-link to="/home_routes" class="route_flexbox xxx"
-            >英雄古交</router-link
-          >
-          <router-link to="/home_routes" class="route_flexbox xxxx"
-            >夜游古交</router-link
-          >
-        </div>
-        <div class="ontherway">其他路线></div>
-      </div>
-      <div class="route_show">
-        <div class="route_showbox first">
-          <div class="img first">
-            <router-link to="/home_routes" style="text-decoration: none">
-              <span
-                ><i>01</i> <strong>古老古交</strong
-                ><br />太原市唯一一处大型旧石器遗址</span
-              >
+          <template v-for="route in routes_headerList">
+            <router-link
+              :to="route.to"
+              :class="['route_flexbox', route.className]"
+            >
+              {{ route.label }}
             </router-link>
-          </div>
-          <div class="img second">
-            <img
-              src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Subtract.png"
-              alt=""
-            />
-          </div>
+          </template>
         </div>
-        <div class="route_showbox">
-          <div class="img">
-            <img
-              src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2025.png"
-              alt=""
-            />
+        <div class="ontherway">其他路线>></div>
+      </div>
+      <!-- 内容部分 -->
+      <div class="route_show">
+        <!-- 使用 v-for 遍历 routes 数组 -->
+        <div
+          class="route_showbox"
+          v-for="(route, index) in TopRoutes"
+          :key="route.id"
+          :class="{ first: index === 0 }"
+        >
+          <!-- 添加 first 类来特殊处理第一个 route_showbox 元素 -->
+          <div class="img" :class="{ first: index === 0 }">
+            <img :src="route.image" alt="" />
           </div>
-          <router-link to="/home_routes" style="text-decoration: none">
-            <span
-              ><i>02</i> <strong>神秘古交</strong
-              ><br />“龙城秘境”地处与角子崖，地理位置独特，地形地貌奇绝</span
-            ></router-link
+          <router-link
+            :to="route.to"
+            class="route_link"
+            style="text-decoration: none"
           >
-        </div>
-        <div class="route_showbox">
-          <div class="img">
-            <img
-              src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/26.png"
-              alt=""
-            />
-          </div>
-          <router-link to="/home_routes" style="text-decoration: none">
-            <span
-              ><i>03</i> <strong>英雄古交</strong
-              ><br />晋绥八分区（专署旧址），被党中央誉为“钢铁走廊”</span
-            ></router-link
-          >
-        </div>
-        <div class="route_showbox">
-          <div class="img">
-            <img
-              src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/27.png"
-              alt=""
-            />
-          </div>
-          <router-link to="/home_routes" style="text-decoration: none">
-            <span
-              ><i>04</i> <strong>夜游古交</strong
-              ><br />古交电厂夜景，静谧而绚烂</span
-            ></router-link
-          >
+            <span>
+              <i>{{ route.number }}</i> <strong>{{ route.title }}</strong
+              ><br />
+              {{ route.summary }}
+            </span>
+          </router-link>
         </div>
       </div>
     </div>
@@ -84,26 +52,82 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Routes_news from "./Routes_news.vue";
-export default {
-  data() {
-    return {};
+import { ref, onMounted } from "vue";
+import { getHomeTOPRoute, getRouteInfo } from "@/utils/api/index.js";
+import axios from "axios";
+const routes = ref();
+const TopRoutes = ref([
+  {
+    id: 1,
+    image: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Subtract.png",
+    to: "/home_routes",
+    number: "01",
+    title: "古老古交",
+    summary: "太原市唯一一处大型旧石器遗址",
   },
-  components: {
-    Routes_news,
+  {
+    id: 2,
+    image: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%2025.png",
+    to: "/home_routes",
+    number: "02",
+    title: "神秘古交",
+    summary: "“龙城秘境”地处与角子崖，地理位置独特，地形地貌奇绝",
   },
-};
+  {
+    id: 3,
+    image: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/26.png",
+    to: "/home_routes",
+    number: "03",
+    title: "英雄古交",
+    summary: "晋绥八分区（专署旧址），被党中央誉为“钢铁走廊”",
+  },
+  {
+    id: 4,
+    image: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/27.png",
+    to: "/home_routes",
+    number: "04",
+    title: "夜游古交",
+    summary: "古交电厂夜景，静谧而绚烂",
+  },
+]);
+let routes_headerList = ref([
+  {
+    to: "/home_routes",
+    className: "x",
+    label: "古老古交",
+  },
+  {
+    to: "/home_routes",
+    className: "xx",
+    label: "神秘古交",
+  },
+  {
+    to: "/home_routes",
+    className: "xxx",
+    label: "英雄古交",
+  },
+  {
+    to: "/home_routes",
+    className: "xxxx",
+    label: "夜游古交",
+  },
+]);
+
+onMounted(() => {
+  getHomeTOPRoute().then((res) => {
+    routes.value = res.data;
+    console.log(res.data); // 打印出接口返回的routes数据
+   
+  });
+});
 </script>
 
 <style scoped>
 .box {
   position: relative;
   top: 50px;
-  /* left: 18%; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%); */
   width: 1050px;
   height: 400px;
   min-height: 400px;
@@ -114,7 +138,7 @@ export default {
 }
 .routes {
   position: relative;
-  /* background-color: greenyellow; */
+
   width: 70%;
   height: 400px;
 }
@@ -134,7 +158,6 @@ p {
   font-size: 20px;
 }
 .route_flex {
-  /* background-color: blanchedalmond; */
   position: relative;
   width: 56%;
   height: 100%;
@@ -147,7 +170,6 @@ p {
   height: 60%;
   position: relative;
   top: 20%;
-  /* background-color: blueviolet; */
   font-size: 16px;
   line-height: 200%;
   text-align: center;
@@ -156,31 +178,11 @@ p {
   border: none;
   text-decoration: none;
 }
-
 .route_flexbox.x {
   background-color: #ffd700;
   color: #af9404;
 }
-.route_flexbox.x:hover {
-  color: black;
-  box-shadow: 3px 3px 3px 3px #681717;
-  animation-fill-mode: forwards;
-}
-.route_flexbox.xx:hover {
-  color: black;
-  box-shadow: 3px 3px 3px 3px #681717;
-  animation-fill-mode: forwards;
-}
-.route_flexbox.xxx:hover {
-  color: black;
-  box-shadow: 3px 3px 3px 3px #681717;
-  animation-fill-mode: forwards;
-}
-.route_flexbox.xxxx:hover {
-  color: black;
-  box-shadow: 3px 3px 3px 3px #681717;
-  animation-fill-mode: forwards;
-}
+
 .route_flexbox.xx {
   background-color: #00bfff;
   color: #0482ac;
@@ -190,9 +192,28 @@ p {
   background-color: #9acd32;
   color: #638322;
 }
+
 .route_flexbox.xxxx {
   background-color: #48d1cc;
   color: #338582;
+}
+.route_flexbox:hover {
+  color: black;
+  box-shadow: 3px 3px 3px 3px #681717;
+  animation-fill-mode: forwards;
+}
+.route_flexbox:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.route_flexbox:hover:before {
+  opacity: 0.2;
 }
 .ontherway {
   position: relative;
@@ -202,6 +223,7 @@ p {
   font-size: 14px;
   line-height: 400%;
   font-style: italic;
+  cursor: pointer;
 }
 .route_show {
   display: flex;
@@ -210,8 +232,8 @@ p {
   position: relative;
   width: 100%;
   height: 90%;
-  /* background-color: turquoise; */
 }
+
 .route_showbox {
   position: relative;
   width: 64%;
@@ -222,15 +244,17 @@ p {
   border-bottom-color: #c9c8c8;
   display: flex;
 }
+
 .route_showbox.first {
   flex: none;
   height: 100%;
   width: 36%;
-  background-color: yellowgreen;
+  background-color: #ffe4e4;
   border: none;
   display: flex;
   flex-direction: column;
 }
+
 .img {
   position: relative;
   width: 30%;
@@ -238,23 +262,29 @@ p {
   background-color: teal;
   margin: 10px;
 }
+
 .img.first {
   position: relative;
   width: 100%;
-  height: 33%;
-  margin: 0px;
+  height: 70%;
+  margin: 0px; /* 修改 */
+  margin-top: 18.8%;
   background-color: #ffe4e4;
+  order: 2;
 }
+
 .img.second {
   position: relative;
   width: 100%;
   margin: 0;
   background-color: #ffe4e4;
 }
+
 img {
   max-width: 100%;
   height: 100%;
 }
+
 span {
   position: relative;
   max-width: 60%;
@@ -264,11 +294,13 @@ span {
   font-size: 13px;
   color: #666666;
 }
+
 i {
   color: #d40000;
   font-size: 27px;
   font-style: serif;
 }
+
 strong {
   font-size: 18px;
   color: black;

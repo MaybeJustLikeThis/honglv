@@ -1,3 +1,7 @@
+<!-- 首页内容
+    李建霆
+    2024/4/17
+ -->
 <template>
   <div class="box">
     <Carousel></Carousel>
@@ -8,21 +12,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Carousel from "@/components/Home/Carousel.vue";
 import Routes from "@/components/Home/Home_Routes/Routes.vue";
 import Show from "@/components/Home/Home_Show/Show.vue";
 import Show_hot from "@/components/Home/Home_Show/Show_hot.vue";
 import Show_str from "@/components/Home/Home_Show/Show_strategy.vue";
-export default {
-  components: {
-    Carousel,
-    Routes,
-    Show,
-    Show_hot,
-    Show_str,
-  },
-};
 </script>
 
 <style scoped>

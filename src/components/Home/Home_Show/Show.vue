@@ -1,3 +1,8 @@
+<!-- 首页-展示图片-旅游向导
+  李建霆
+  2024/4/17
+-->
+
 <template>
   <div class="outbox">
     <div class="show">
@@ -36,13 +41,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import showbox from "@/components/showbox.vue";
-export default {
-  components: {
-    showbox,
-  },
-};
 </script>
 
 <style scoped>
