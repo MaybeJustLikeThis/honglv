@@ -1,9 +1,7 @@
 <template>
   <el-aside class="aside">
-    <div>
-      <div class="title">周边短途游</div>
-      <div class="aside-content"></div>
-    </div>
+    <div class="title">周边短途游</div>
+    <div class="aside-content"></div>
   </el-aside>
 </template>
 
@@ -11,15 +9,17 @@
 
 <style scoped>
 .aside {
-  /* background-color: #f5f5f5; */
+  background-color: #f5f5f5;
   position: relative;
-  width: 40%;
-  padding-left: 17.6%;
+  width: 30%;
+  max-width: 800px;
+  /* padding-left: 17.6%; */
 }
 .aside-content {
   position: relative;
   width: 100%;
   height: 600px;
+
   background-color: aqua;
 }
 .title {
