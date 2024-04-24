@@ -4,6 +4,7 @@ import Routes from "../components/Home_routes(xjb)/routes.vue";
 import Home_routes from "../components/Home_routes(xjb)/routes.vue";
 import Home_routes_news from "../view/News.vue";
 import home_show_hotel from "../view/Rank_2.vue";
+import AdminCenter from "../view/AdminCenter.vue"
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -56,6 +57,10 @@ const router = createRouter({
     {
       path: "/home_show_hotel",
       component: home_show_hotel,
+    },
+    {
+      path: "/AdminCenter",
+      component: AdminCenter
     },
   ],
 });
