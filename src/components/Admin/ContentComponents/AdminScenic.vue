@@ -1,65 +1,65 @@
 <template>
-    <admin-body-content 
-    v-for="(scenic,index) in scenics"
-    :key="index">
-        <template #title>
-            {{ scenic.name }}
-        </template> 
-        <template #des>
-            {{ scenic.decs }}
-        </template>
-        <template #data>
-            {{ scenic.data }}
-        </template>
-        <template #view>
-            {{ scenic.views }}
-        </template>
-    </admin-body-content>
+    <div class="box">
+        <admin-body-content v-for="(scenic, index) in newScenics" :key="index">
+            <template #title>
+                {{ scenic.name }}
+            </template>
+            <template #des>
+                {{ scenic.decs }}
+            </template>
+            <template #data>
+                {{ scenic.data }}
+            </template>
+            <template #view>
+                {{ scenic.views }}
+            </template>
+        </admin-body-content>
+    </div>
+
+    <Pagination :scenicsProp="scenics" @changePage="getCurrentPage"
+    v-if="isHas"></Pagination>
 </template>
 
 <script setup>
 import AdminBodyContent from '../AdminBodyContent.vue';
-
+import Pagination from './Pagination.vue'
+import { getAllAttractions } from '../../../utils/api/adminApi';
 import { ref } from 'vue'
-const scenics = ref([
-    {
-        id: 1,
-        name: "角子崖",
-        decs: "绝美大片打卡地",
-        data: "2022-06-15 18:18:05",
-        views: 15
-    },
-    {
-        id: 2,
-        name: "吕梁山",
-        decs: "四万万人齐蹈厉，同心同德一戎衣",
-        data: "2021-02-24 08:20:00",
-        views: 18
-    },
-    {
-        id: 3,
-        name: "红豆山庄",
-        decs: "大型高端生态恢复示范园",
-        data: "2017-02-20 17:38:00",
-        views: 16
-    },
-    {
-        id: 4,
-        name: "千佛寺",
-        decs: "最富盛名的千年古刹",
-        data: "2023-07-14 16:17:00",
-        views: 13
-    },
-    {
-        id: 5,
-        name: "古交晋绥八分区(专署)旧址",
-        decs: "红色沃土寻初心 革命精神照古今",
-        data: "2021-01-22 12:40:00",
-        views: 11
-    }
-])
+let scenics = ref([])
+let start = ref(0)
+let end = ref(5)
+let tempData = ref([])
+let newScenics = ref([])
+let isHas = ref(false)
+
+getAllAttractions().then(res => {
+    // console.log(res.data)
+    scenics.value = res.data
+    tempData.value = scenics.value
+    newScenics.value = tempData.value.slice(start.value, end.value)
+    // 确保数据请求完毕再去渲染子组件
+    isHas.value = true
+})
+
+// console.log("data", scenics)
+// console.log("data", scenics.value)
+// console.log('temp',tempData)
+// console.log(newScenics,'new')
+
+const getCurrentPage = payload => {
+    start.value = (payload - 1) * 5
+    end.value = payload * 5
+    newScenics.value = tempData.value.slice(start.value, end.value)
+    // console.log(start.value, 'sv')
+    // console.log(end.value, 'ev')
+}
+
 </script>
 
 <style scoped>
+.box{
+  max-height: 444px;
+  overflow: hidden;
+}
 
 </style>

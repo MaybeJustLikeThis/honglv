@@ -16,6 +16,7 @@
           <!-- <router-link to=""></router-link> -->
           <!-- <admin-body-content></admin-body-content> -->
           <admin-scenic></admin-scenic>
+          
         </div>
       </div>
     </div>
@@ -79,6 +80,7 @@ import AdminScenic from '../components/Admin/ContentComponents/AdminScenic.vue'
   margin-top: 85px;
   border-top: 1px solid rgba(201, 200, 200, 1);
   /* overflow: auto; */
-  /* overflow: hidden; */
+  overflow: hidden;
+  position: relative;
 }
 </style>
