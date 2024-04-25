@@ -5,7 +5,7 @@
             <div class="edit_icon">
                 <img src="../../../public/Admin/edit_icon.png" alt="">
             </div>
-            <div class="delete_icon">
+            <div class="delete_icon" @click="deleteClick">
                 <img src="../../../public/Admin/delect_icon.png" alt="">
             </div>
         </div>
@@ -51,7 +51,11 @@
 </template>
 
 <script setup>
-// import { ref } from 'vue'
+import { defineEmits } from 'vue'
+const emit = defineEmits(["deleteBtnClk"])
+const deleteClick = () => {
+    emit("deleteBtnClk")
+}
 </script>
 
 <style scoped>

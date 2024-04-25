@@ -28,7 +28,6 @@
 import Header from '../libs/Header.vue';
 import Bottom from '../libs/Home_Bottom/Bottom.vue'
 import AdminBodyNav from '../components/Admin/AdminBodyNav.vue';
-import AdminBodyContent from '../components/Admin/AdminBodyContent.vue';
 import AdminScenic from '../components/Admin/ContentComponents/AdminScenic.vue'
 </script>
 
