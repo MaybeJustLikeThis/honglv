@@ -1,5 +1,5 @@
 <template>
-  <el-main class="command-main">
+  <div class="command-main">
     <div class="command-title">推荐攻略</div>
     <div class="command-content">
       <Command_Content
@@ -8,7 +8,7 @@
         :item="item"
       ></Command_Content>
     </div>
-  </el-main>
+  </div>
 </template>
 
 <script setup>
@@ -23,6 +23,7 @@ onMounted(() => {
 <style scoped>
 .command-main {
   position: relative;
+  width: 75%;
   height: 100%;
   padding: 0;
   padding-left: 20px;
@@ -35,8 +36,9 @@ onMounted(() => {
 }
 .command-content {
   position: relative;
-  width: 70%;
+  width: 100%;
   height: 1510px;
   background-color: antiquewhite;
+  /* max-width: 1200px; */
 }
 </style>
