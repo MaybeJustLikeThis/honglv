@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import * as path from "path";
 import eslintPlugin from "vite-plugin-eslint"; //导入包
+import { viteMockServe } from "vite-plugin-mock";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,5 +13,9 @@ export default defineConfig({
     },
   },
   // 配置ESLint插件
-  plugins: [vue()],
+  plugins: [vue(),
+    viteMockServe({
+      mockPath: 'src/mock/',  // 设置模拟数据的存储文件夹
+      localEnabled:true,  //设置是否启用本地mock文件
+  })],
 });
