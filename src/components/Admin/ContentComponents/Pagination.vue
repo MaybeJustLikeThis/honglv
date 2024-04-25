@@ -6,8 +6,8 @@
 </template>
 
 <script setup>
-import { ref, defineProps, defineEmits } from 'vue'
-const emit = defineEmits(["changePage"])
+import { ref, defineProps, defineEmits } from "vue";
+const emit = defineEmits(["changePage"]);
 const props = defineProps({
     scenicsProp: {
         type: Array,
@@ -32,11 +32,11 @@ const changePage = currentPage => {
 
 <style scoped>
 .el-pagination {
-    justify-content: center;
-    position: absolute;
-    bottom: 54px;
-    transform: translateX(-50%);
-    left: 50%;
+  justify-content: center;
+  position: absolute;
+  bottom: 54px;
+  transform: translateX(-50%);
+  left: 50%;
 }
 :deep.el-pagination > ul > li.is-active{
     background-color: #ffe4e4  !important;
