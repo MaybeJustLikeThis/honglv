@@ -12,42 +12,55 @@ let index = ref(0);
                红侣旅行网 统一身份认证
             </div> -->
             <div class="submit-change">
-                <div class="phone-submit" :class="{'active':index === 0}" @click="index = 0">密码登陆</div>
-                <div class="userpassword-submit" :class="{'active':index === 1}" @click="index = 1">短信登陆</div>
+                <div class="phone-submit" :class="{'active':index === 0}" @click="index = 0">手机号注册</div>
+                <div class="userpassword-submit" :class="{'active':index === 1}" @click="index = 1">邮箱号注册</div>
             </div>
             <div class="phone" v-if="index===0">
-                <div class="phone-one">
-                <img class="user-alavator" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/user-alavator.png">
-                <input class="phone-number" type="text" placeholder="请输入手机号或邮箱">
-                </div>
-                <div class="phone-two">
-                <img class="username" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/username.png">
-                <input class="verification" type="password" placeholder="请输入密码">
-                </div>
-                <div class="change-character">
-                    用户身份<input type="radio" class="change-management" name="f">用户
-                           <input type="radio" class="change-managemented" name="f">管理员
-                </div>
-                <button class="login">登陆</button>
-           
-            </div>
-            <div class="userpassword" v-else>
                 <div class="phone-one">
                 <img class="user-alavator" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/user-alavator.png">
                 <input class="phone-number" type="text" placeholder="请输入手机号">
                 </div>
 
-                <div class="phone-two">
+                <div class="phone-one">
                 <img class="username" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/username.png">
-                <input class="verification" type="password" placeholder="请输入验证码">
+                <input class="verification" type="password" placeholder="请输入密码">
                 </div>
-                <div class="change-character">
-                    用户身份<input type="radio" class="change-management" name="f">用户
-                           <input type="radio" class="change-managemented" name="f">管理员
-                </div>
-                <button class="login">登陆</button>
-            </div>  
 
+                <div class="phone-one">
+                <img class="user-alavator" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/审核 (1) 1.png">
+                <input class="phone-number" type="text" placeholder="请输入验证码">
+                </div>
+
+                <div class="phone-one">
+                <img class="user-alavator" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/合作伙伴 (2) 1.png">
+                <input class="phone-number" type="text" placeholder="请输入邀请码">
+                </div>
+            
+                <button class="login">注册</button>
+            </div>
+            <div class="userpassword" v-else>
+                <div class="phone-one">
+                <img class="user-alavator" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/user-alavator.png">
+                <input class="phone-number" type="text" placeholder="请输入邮箱号">
+                </div>
+
+                <div class="phone-one">
+                <img class="username" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/username.png">
+                <input class="verification" type="password" placeholder="请输入密码">
+                </div>
+
+                <div class="phone-one">
+                <img class="user-alavator" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/合作伙伴 (2) 1.png">
+                <input class="phone-number" type="text" placeholder="请输入邀请码">
+                </div>
+
+                <button class="login">注册</button>
+            </div>  
+            <div class="confirm-protocol">
+                <div class="login-next"><input type="radio" class="confirm-protocoled">我已阅读并同意用户协议和隐私政策</div>
+                <div class="forget-password">忘记密码</div>
+                <div class="login-change">登录</div>
+            </div>
             <div class="other">
                 <div class="left"></div>
                 <div class="middle">其他方式</div>
@@ -75,10 +88,10 @@ let index = ref(0);
     position: absolute;
     top:50%;
     left:50%;
-    margin-top:-290px;
+    margin-top:-316px;
     margin-left:-214px;
     Width:428px;
-    Height:490px;
+    Height:632px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 40px;
 }
@@ -96,7 +109,7 @@ let index = ref(0);
 
 .content{
     width: 340px;
-    height: 490px;
+    height: 633px;
     margin: 0 auto;
     color: white;
 }
@@ -133,7 +146,7 @@ let index = ref(0);
     justify-content: space-around;
     flex-direction: column;
     width: 340px;
-    height: 280px;
+    height: 400px;
 }
 
 input{
@@ -167,14 +180,12 @@ input::-webkit-input-placeholder {
     margin-left:20px;
 }
 
-.phone-one {
+.phone-one{
     position: relative;
- 
 }
 
 .phone-two{
     position: relative;
-    
 }
 
 .username{
@@ -200,6 +211,10 @@ input::-webkit-input-placeholder {
     display: inline-block;
     width: 86px;
     text-align: center;
+}
+
+.other{
+    margin-top:10px;
 }
 
 .other-way{
@@ -240,9 +255,29 @@ input::-webkit-input-placeholder {
 }
 
 .change-managemented{
-     margin-left: 50px;
-    display: inline-block;
+    margin-left: 50px;
+display: inline-block;
    width: 14px;
    height: 14px;
+}
+
+.confirm-protocol{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 11px;
+}
+
+.confirm-protocoled{
+   width: 16px;
+   height: 12px;
+}
+
+.login-change{
+    height: 12px;
+}
+
+.forget-password{
+     height: 12px;
 }
 </style>
