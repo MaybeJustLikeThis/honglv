@@ -8,15 +8,18 @@
             后台管理中心
           </div>
           <div class="body_nav">
-            <admin-body-nav></admin-body-nav>
+            <admin-body-nav @spanclk="getCurrentManageData"></admin-body-nav>
           </div>
-
         </div>
+        
         <div class="body_right">
+
+          <router-view></router-view>
           <!-- <router-link to=""></router-link> -->
           <!-- <admin-body-content></admin-body-content> -->
-          <admin-scenic></admin-scenic>
-          
+          <!-- <admin-message :navURL="currentNavURL">
+          </admin-message> -->
+
         </div>
       </div>
     </div>
@@ -28,7 +31,21 @@
 import Header from '../libs/Header.vue';
 import Bottom from '../libs/Home_Bottom/Bottom.vue'
 import AdminBodyNav from '../components/Admin/AdminBodyNav.vue';
-import AdminScenic from '../components/Admin/ContentComponents/AdminScenic.vue'
+// import AdminMessage from '../components/Admin/ContentComponents/AdminMessage.vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const getCurrentManageData = payload => {
+  console.log("getCurrentManageData调用")
+  console.log("payload",payload)
+  router.push({
+    path: `/AdminCenter/${payload.title}`,
+    query: {
+      url: payload.url,
+      name: payload.name,
+    }
+  })
+}
+
 </script>
 
 <style scoped>
