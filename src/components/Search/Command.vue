@@ -3,9 +3,10 @@
     <div class="command-title">推荐攻略</div>
     <div class="command-content">
       <Command_Content
-        v-for="(item, index) in 5"
+        v-for="(item, index) in data"
         :key="index"
         :item="item"
+        @like="handleLike"
       ></Command_Content>
     </div>
   </div>
@@ -14,9 +15,22 @@
 <script setup>
 import Command_Content from "@/components/Search/Command_Content.vue";
 import { ref, onMounted } from "vue";
+import { getTOPInformation } from "../../utils/api/index.js";
+let data = ref();
 
+function handleLike(id, like_type) {
+  // 在这里处理从子组件传递过来的点赞id
+  console.log(id);
+}
 onMounted(() => {
-  // console.log("mounted");
+  getTOPInformation()
+    .then((res) => {
+      // console.log(res.data);
+      data.value = res.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 </script>
 
@@ -35,10 +49,11 @@ onMounted(() => {
   margin-bottom: 20px;
 }
 .command-content {
+  border-top: 2px solid #ff5353;
   position: relative;
   width: 100%;
   height: 1510px;
-  background-color: antiquewhite;
+  background-color: white;
   /* max-width: 1200px; */
 }
 </style>

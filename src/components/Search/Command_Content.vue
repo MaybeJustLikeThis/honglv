@@ -13,11 +13,11 @@
           来自
           <span class="content-from-text">{{ from }}</span>
         </div>
-        <div class="content-title-text">{{ title }}</div>
+        <div class="content-title-text">{{ item.title }}</div>
       </div>
       <div class="content-title-right">
         <div class="content-like">
-          <el-button round class="content-like-btn"
+          <el-button round class="content-like-btn" @click="handleLike(item.id)"
             >{{ like_num }} 点赞
             <div class="content-like-icon">
               <img src="../../../public/home/点赞_块.svg" alt="点赞" />
@@ -31,40 +31,44 @@
       <div class="text-content">
         <p>{{ text }}</p>
       </div>
-      <div class="content-user">{{ user_name }}发布于 2022-01-01</div>
+      <div class="content-user">
+        <span>{{ user_name }}</span> <span>{{ view_num }}浏览</span>
+        <span> {{ comments_num }}评论</span>
+      </div>
     </div>
   </div>
   <hr />
 </template>
 
 <script setup>
-import { ref, onMounted, defineProps } from "vue";
+import { ref, onMounted, defineProps, defineEmits } from "vue";
 
 let from = ref("美食");
 let title = ref("杭州美食,带你从早吃到晚!");
 let text = ref(
   "俗话说的好，上有天堂，下有苏杭，杭州不仅因其秀美的风景而久负盛名，这里还有许多特色美食佳着，能够为你打开另一扇了解杭州的门。"
 );
+let user_name = ref("老李头"); // 发布者用户名
+let view_num = ref(666);
+let comments_num = ref(50);
 let picture = ref("");
 let like_num = ref(0);
-let user_name = ref(""); // 发布者用户名
 
 const props = defineProps({
-  data: {
-    from: String,
-    title: String,
-    text: String,
-    picture: String,
-    like_num: Number,
-    user_name: String,
+  item: {
+    data: Object,
     required: true,
   },
 });
+let item = ref(props.item);
 
-onMounted(() => {
-  // 获取数据
-  // from = "来自xxx";
-});
+
+const emits = defineEmits(["like"]);
+const handleLike = (id) => {
+  // 执行点赞相关逻辑
+  emits("like", id); // 触发自定义事件，将点赞的id传递给父组件
+};
+onMounted(() => {});
 </script>
 
 <style scoped>
@@ -76,12 +80,12 @@ hr {
   position: relative;
   width: 100%;
   height: 300px;
-  background-color: gold;
+  /* background-color: gold; */
   max-width: 1200px;
 }
 .content-title {
   position: relative;
-  background-color: gray;
+  /* background-color: gray; */
   width: 100%;
   height: 40%;
   display: flex;
@@ -90,14 +94,14 @@ hr {
 .content-title-left {
   display: flex;
   flex-direction: column;
-  background-color: tomato;
+  /* background-color: tomato; */
   align-items: center;
   padding: 10px;
   width: 80%;
 }
 .content-title-right {
   position: relative;
-  background-color: orange;
+  /* background-color: orange; */
   width: 20%;
   height: 100%;
 }
@@ -116,17 +120,20 @@ hr {
   position: relative;
   top: 10px;
   font-size: 22px;
-  background-color: rgb(148, 49, 49);
+  /* background-color: rgb(148, 49, 49); */
   position: relative;
+  margin-left: 22px;
+
   width: 100%;
   height: 60%;
 }
 .content-like-btn {
   background-color: white;
+  border-color: #ff8a00;
   position: relative;
   width: 80%;
   max-width: 100px;
-  transform: translate(10%, 120%);
+  transform: translate(10%, 200%);
 }
 .content-text {
   position: relative;
@@ -140,14 +147,14 @@ hr {
   position: relative;
   width: 30%;
   height: 100%;
-  background-color: rgb(116, 8, 8);
+  /* background-color: rgb(116, 8, 8); */
 }
 .text-content {
   position: relative;
   width: 46%;
   height: 100%;
   color: #666666;
-  background-color: rgb(28, 199, 65);
+  /* background-color: rgb(28, 199, 65); */
   font-size: 16px;
   display: flex;
   flex-direction: column;
@@ -163,9 +170,9 @@ p {
   height: 20%;
   color: #999999;
   font-size: 12px;
-  background-color: rgb(39, 19, 112);
+  /* background-color: rgb(39, 19, 112); */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 img {
