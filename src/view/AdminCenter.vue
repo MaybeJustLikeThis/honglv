@@ -16,6 +16,7 @@
           <!-- <router-link to=""></router-link> -->
           <!-- <admin-body-content></admin-body-content> -->
           <admin-scenic></admin-scenic>
+          
         </div>
       </div>
     </div>
@@ -27,7 +28,6 @@
 import Header from '../libs/Header.vue';
 import Bottom from '../libs/Home_Bottom/Bottom.vue'
 import AdminBodyNav from '../components/Admin/AdminBodyNav.vue';
-import AdminBodyContent from '../components/Admin/AdminBodyContent.vue';
 import AdminScenic from '../components/Admin/ContentComponents/AdminScenic.vue'
 </script>
 
@@ -79,6 +79,7 @@ import AdminScenic from '../components/Admin/ContentComponents/AdminScenic.vue'
   margin-top: 85px;
   border-top: 1px solid rgba(201, 200, 200, 1);
   /* overflow: auto; */
-  /* overflow: hidden; */
+  overflow: hidden;
+  position: relative;
 }
 </style>

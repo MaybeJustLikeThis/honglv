@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="box">
     <div id="search_header">
       <div id="search_header_left">
         <div class="secondaryMenu">
@@ -12,12 +12,10 @@
         <Carouselsp />
       </div>
     </div>
-    <el-container>
-      <el-container>
-        <shortTrip />
-        <Command />
-      </el-container>
-    </el-container>
+    <div class="content-container">
+      <shortTrip />
+      <Command />
+    </div>
   </div>
 </template>
 
@@ -30,6 +28,12 @@ import Command from "@/components/Search/Command.vue";
 </script>
 
 <style scoped>
+#box {
+  margin: 0 auto;
+  min-width: 1200px;
+  max-width: 100%;
+  height: auto;
+}
 #search_header {
   position: relative;
   width: 65%;
@@ -39,6 +43,7 @@ import Command from "@/components/Search/Command.vue";
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1600px;
 }
 #search_header_left {
   position: relative;
@@ -72,5 +77,14 @@ import Command from "@/components/Search/Command.vue";
   position: relative;
   width: 60%;
   height: 100%;
+}
+.content-container {
+  position: relative;
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  max-width: 1600px;
 }
 </style>
