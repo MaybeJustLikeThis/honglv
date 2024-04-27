@@ -1,58 +1,79 @@
 <template>
     <div class="box">
-        <admin-body-content v-for="(scenic, index) in newScenics" :key="index">
-            <template #title>
-                {{ scenic.name }}
-            </template>
-            <template #des>
-                {{ scenic.decs }}
-            </template>
-            <template #data>
-                {{ scenic.data }}
-            </template>
-            <template #view>
-                {{ scenic.views }}
-            </template>
-        </admin-body-content>
+
+        <div v-for="(scenic, index) in scenics.value" :key="index">
+            <admin-body-content @deleteBtnClk="openDelectCpnShow(index)" 
+            v-if="start <= index && index <= end">
+                <template #title>
+                    {{ scenic.name }}
+                </template>
+                <template #des>
+                    {{ scenic.decs }}
+                </template>
+                <template #data>
+                    {{ scenic.data }}
+                </template>
+                <template #view>
+                    {{ scenic.views }}
+                </template>
+            </admin-body-content>
+        </div>
     </div>
 
-    <Pagination :scenicsProp="scenics" @changePage="getCurrentPage"
-    v-if="isHas"></Pagination>
+    <Pagination :scenicsProp="scenics.value" @changePage="getCurrentPage" v-if="isHasData"></Pagination>
+
+    <admin-delect class="delect_component" @cancelBTnClick="closeDelectCpnShow" v-if="isShow"></admin-delect>
 </template>
 
 <script setup>
 import AdminBodyContent from '../AdminBodyContent.vue';
 import Pagination from './Pagination.vue'
+import AdminDelect from './AdminDelect.vue';
 import { getAllAttractions } from '../../../utils/api/adminApi';
-import { ref } from 'vue'
-let scenics = ref([])
+import { ref, reactive } from 'vue'
+// import { ref, watch } from 'vue'
+let scenics = reactive({
+    value:[]
+})
 let start = ref(0)
 let end = ref(5)
-let tempData = ref([])
-let newScenics = ref([])
-let isHas = ref(false)
+let isHasData = ref(false)
+let isShow = ref(false)
+let getIndex = ref(0)
 
 getAllAttractions().then(res => {
-    // console.log(res.data)
     scenics.value = res.data
-    tempData.value = scenics.value
-    newScenics.value = tempData.value.slice(start.value, end.value)
     // 确保数据请求完毕再去渲染子组件
-    isHas.value = true
+    isHasData.value = true
 })
-
-// console.log("data", scenics)
-// console.log("data", scenics.value)
-// console.log('temp',tempData)
-// console.log(newScenics,'new')
 
 const getCurrentPage = payload => {
     start.value = (payload - 1) * 5
-    end.value = payload * 5
-    newScenics.value = tempData.value.slice(start.value, end.value)
+    end.value = (payload * 5) > scenics.value.length ?
+                scenics.value.length : (payload * 5)
     // console.log(start.value, 'sv')
     // console.log(end.value, 'ev')
 }
+
+const openDelectCpnShow = indexVal => {
+    isShow.value = true
+    getIndex.value = indexVal
+}
+
+function closeDelectCpnShow(payload){
+    if (payload) {
+        // console.log(getIndex.value, 'getIndex.value')
+        scenics.value.splice(getIndex.value, 1)
+        // console.log(scenics.value, "scenics")
+    } 
+    isShow.value = false
+    return scenics
+}
+
+// watch(scenics, (newScenics) => {
+//     // 强制更新DOM进行同步渲染
+//     scenics.value = newScenics;
+// }, { deep: true });
 
 </script>
 
@@ -62,4 +83,9 @@ const getCurrentPage = payload => {
   overflow: hidden;
 }
 
+.delect_component{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
 </style>
