@@ -49,6 +49,17 @@ let refreshCpn = ref(0)
 let getIndex = ref(0)
 let dataLength = ref(0)
 
+console.log("AdminMessage组件渲染")
+
+getAllAttractions().then(res => {
+    console.log(res.data, "resData")
+    data.value = res.data
+    dataLength.value = data.value.length
+    localStorage.setItem("dataLength", dataLength.value)
+    // 确保数据请求完毕再去渲染子组件
+    isHasData.value = true
+});
+
 onBeforeRouteUpdate((to, from) => {
     console.log("from:", from.params.title)
     console.log("to:", to.params.title)
@@ -68,15 +79,6 @@ onBeforeRouteUpdate((to, from) => {
         isHasData.value = true
     });
 })
-
-getAllAttractions().then(res => {
-    console.log(res.data, "resData")
-    data.value = res.data
-    dataLength.value = data.value.length
-    localStorage.setItem("dataLength", dataLength.value)
-    // 确保数据请求完毕再去渲染子组件
-    isHasData.value = true
-});
 
 const getCurrentPage = payload => {
     start.value = (payload - 1) * 5

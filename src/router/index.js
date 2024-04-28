@@ -63,8 +63,18 @@ const router = createRouter({
       component: AdminCenter,
       children: [
         {
+          path: "",
+          redirect: "/AdminCenter/AllAttractions",
+        },
+        {
+          path: "AllAttractions",
+          component: () =>
+            import("../components/Admin/ContentComponents/AdminMessage.vue"),
+        },
+        {
           path: ":title",
-          component: ()=>import("../components/Admin/ContentComponents/AdminMessage.vue")
+          component: () =>
+            import("../components/Admin/ContentComponents/AdminMessage.vue"),
         },
       ],
     },

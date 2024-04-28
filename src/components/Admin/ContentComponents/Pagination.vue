@@ -6,9 +6,9 @@
 </template>
 
 <script setup>
-import { ref, defineProps, defineEmits, computed, watch } from "vue";
+import { ref, defineEmits, computed, watch } from "vue";
 const emit = defineEmits(["changePage"]);
-console.log("我渲染了")
+// console.log("我渲染了")
 // const props = defineProps({
 //     dataProp: {
 //         type: Array,
@@ -25,15 +25,6 @@ const currentPage = ref(1)
 const dataLength = ref(5)
 dataLength.value = localStorage.getItem("dataLength")
 totalPage.value = computed(() => Math.ceil(dataLength.value / 5)).value;
-
-console.log(localStorage.getItem("dataLength"))
-
-watch(dataLength, (newVal,oldVal) => {
-    console.log(newVal, "dtnewVal")
-    console.log(oldVal, "dtoldVal")
-}, {
-    deep: true,
-    immediate:true})
 
 const changePage = currentPage => {
     // currentPage.value += 1

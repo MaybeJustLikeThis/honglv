@@ -1,6 +1,7 @@
 <template>
   <div id="background">
     <Header></Header>
+    <bread-crumb></bread-crumb>
     <div class="box_center">
       <div class="mainbody">
         <div class="body_left">
@@ -31,8 +32,10 @@
 import Header from '../libs/Header.vue';
 import Bottom from '../libs/Home_Bottom/Bottom.vue'
 import AdminBodyNav from '../components/Admin/AdminBodyNav.vue';
+import BreadCrumb from '../components/Admin/ContentComponents/BreadCrumb.vue';
 // import AdminMessage from '../components/Admin/ContentComponents/AdminMessage.vue'
 import { useRouter } from 'vue-router'
+
 const router = useRouter()
 const getCurrentManageData = payload => {
   console.log("getCurrentManageData调用")
@@ -98,5 +101,11 @@ const getCurrentManageData = payload => {
   /* overflow: auto; */
   overflow: hidden;
   position: relative;
+}
+
+.bread_crumb{
+  position: absolute;
+  top:142px;
+  left:280px;
 }
 </style>
