@@ -60,7 +60,23 @@ const router = createRouter({
     },
     {
       path: "/AdminCenter",
-      component: AdminCenter
+      component: AdminCenter,
+      children: [
+        {
+          path: "",
+          redirect: "/AdminCenter/AllAttractions",
+        },
+        {
+          path: "AllAttractions",
+          component: () =>
+            import("../components/Admin/ContentComponents/AdminMessage.vue"),
+        },
+        {
+          path: ":title",
+          component: () =>
+            import("../components/Admin/ContentComponents/AdminMessage.vue"),
+        },
+      ],
     },
   ],
 });
