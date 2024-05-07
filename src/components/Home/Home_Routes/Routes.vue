@@ -32,7 +32,7 @@
         >
           <!-- 添加 first 类来特殊处理第一个 route_showbox 元素 -->
           <div class="img" :class="{ first: index === 0 }">
-            <img :src="route.image" alt="" />
+            <img :src="lazy_src" alt="加载失败" :data-src="route.image" />
           </div>
           <router-link
             :to="route.to"
@@ -57,7 +57,10 @@ import Routes_news from "./Routes_news.vue";
 import { ref, onMounted } from "vue";
 import { getHomeTOPRoute, getRouteInfo } from "@/utils/api/index.js";
 import axios from "axios";
+import lazyLoad from "@/utils/lazyLoad.js";
+
 const routes = ref();
+let lazy_src = ref();
 const TopRoutes = ref([
   {
     id: 1,
@@ -116,10 +119,10 @@ let routes_headerList = ref([
 ]);
 
 onMounted(() => {
+  lazyLoad();
   getHomeTOPRoute().then((res) => {
     routes.value = res.data;
-    console.log(res.data); // 打印出接口返回的routes数据
-   
+    // console.log(res.data); // 打印出接口返回的routes数据
   });
 });
 </script>
@@ -259,7 +262,7 @@ p {
   position: relative;
   width: 30%;
   height: 80%;
-  background-color: teal;
+  /* background-color: teal; */
   margin: 10px;
 }
 

@@ -6,17 +6,21 @@
         query: query,
       }"
     >
-      <img :src="img_src" alt="" />
+      <img :src="lazy_src" alt="加载失败" :data-src="img_src" />
       <div class="po">{{ text }}</div>
     </router-link>
 
-    <!-- <div class="strategy">< img src="" alt="" />{{ text2 }}</div> -->
   </div>
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, onMounted, ref } from "vue";
+import lazyLoad from "@/utils/lazyLoad.js";
 const props = defineProps(["img_src", "text", "path", "query"]);
+let lazy_src = ref();
+onMounted(() => {
+  lazyLoad();
+});
 </script>
 
 <style scoped>
