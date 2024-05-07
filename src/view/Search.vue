@@ -39,7 +39,7 @@ import Command from "@/components/Search/Command.vue";
   width: 65%;
   height: 400px;
   margin: 0 auto;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,19 +56,20 @@ import Command from "@/components/Search/Command.vue";
 }
 .secondaryMenu {
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 50%;
-  margin: 20px 0px 10px 40px;
+  margin: 20px 0px 10px 0px;
   box-sizing: border-box;
   padding-right: 50px;
+  align-self: flex-start;
   /* background-color: antiquewhite; */
 }
 .carousel {
   position: relative;
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
   height: 200px;
-  margin: 20px 0px 20px 40px;
+  margin: 20px 0px 10px 0px;
   padding-right: 50px;
   /* background-color: rgb(148, 95, 46); */
 }
