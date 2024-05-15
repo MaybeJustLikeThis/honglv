@@ -12,6 +12,25 @@
           <div class="title">基本信息</div>
           <div class="detailContainer">
             <div class="detailContainerItem">
+              <p><span class="requiredStar">*</span>请选择文章类型:</p>
+              <div class="input">
+                <div class="spotType">
+                  <router-link
+                    v-for="item in items"
+                    :to="item.to"
+                    :class="{
+                      spotTypeItem: true,
+                      spotTypeItemSelected: selectedItem === item.id,
+                    }"
+                    @click="selectItem(item.id)"
+                    :key="item.id"
+                  >
+                    {{ item.label }}
+                  </router-link>
+                </div>
+              </div>
+            </div>
+            <div class="detailContainerItem">
               <p><span class="requiredStar">*</span>地址信息:</p>
               <AddressSelectArea></AddressSelectArea>
             </div>
@@ -25,54 +44,7 @@
                 </ComInput>
               </div>
             </div>
-            <div class="detailContainerItem">
-              <p><span class="requiredStar">*</span>景区名称:</p>
-              <div class="input">
-                <ComInput placeholder="请输入景区名称"></ComInput>
-              </div>
-            </div>
-            <div class="detailContainerItem">
-              <p>咨询电话:</p>
-              <div class="input">
-                <ComInput placeholder="请输入景区咨询电话（选填)"></ComInput>
-              </div>
-            </div>
-            <div class="detailContainerItem">
-              <p>景区等级:</p>
-              <div class="input">
-                <ComInput placeholder="请输入景区等级（选填)"></ComInput>
-              </div>
-            </div>
-            <div class="detailContainerItem">
-              <p><span class="requiredStar">*</span>景点概述:</p>
-              <div class="input">
-                <ComInput
-                  placeholder="请输入景点的概述介绍"
-                  type="textarea"
-                  cols="100"
-                  rows="10"
-                ></ComInput>
-                <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
-              </div>
-            </div>
-            <div class="detailContainerItem">
-              <p><span class="requiredStar">*</span>请选择景点类型:</p>
-              <div class="input">
-                <div class="spotType">
-                  <div
-                    v-for="item in items"
-                    :key="item.id"
-                    :class="{
-                      spotTypeItem: true,
-                      spotTypeItemSelected: selectedItem === item.id,
-                    }"
-                    @click="selectItem(item.id)"
-                  >
-                    {{ item.label }}
-                  </div>
-                </div>
-              </div>
-            </div>
+            <router-view></router-view>
           </div>
         </div>
       </div>
@@ -81,20 +53,22 @@
 </template>
 
 <script setup>
-import BreadCrumbs from "@/components/Blog/BlogComponents/BreadCrumbs.vue";
+// import BreadCrumbs from "@/components/Blog/BlogComponents/BreadCrumbs.vue";
+import BreadCrumbs from "@/libs/BreadCrumb/BreadCrumb.vue";
 import AddressSelectArea from "@/components/Blog/BlogComponents/AddressSelectArea.vue";
 import ComInput from "@/components/Blog/BlogComponents/ComInput.vue";
-
+import { RouterLink, RouterView } from "vue-router";
 import { ref } from "vue";
 
-const items = ref([
-  { id: 1, label: "古老古交类" },
-  { id: 2, label: "神秘古交类" },
-  { id: 3, label: "英雄古交类" },
-  { id: 4, label: "夜游古交类" },
-]);
-
-const selectedItem = ref(null);
+const items = [
+  { id: 1, label: "景点", to: "/honglv/blog/spot" },
+  { id: 2, label: "文创", to: "/honglv/blog/CulturalArt" },
+  { id: 3, label: "酒店", to: "/honglv/blog/hotel" },
+  // { id: 4, label: "美食", to: "/honglv/blog/food" },
+  { id: 5, label: "路线", to: "/honglv/blog/path" },
+  { id: 6, label: "攻略", to: "/honglv/blog/strategy" },
+];
+const selectedItem = ref(1);
 
 const selectItem = (itemId) => {
   selectedItem.value = itemId;
