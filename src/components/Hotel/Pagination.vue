@@ -2,7 +2,6 @@
 import {ref,defineProps, defineEmits} from "vue";
 const currentPage = ref(1)
 function handleCurrentChange(currentPage){
-    console.log(currentPage);
     emits("send",currentPage)
 }
 const emits = defineEmits(["send"])
