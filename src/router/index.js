@@ -77,6 +77,10 @@ const router = createRouter({
           component: () => import("@/view/Search.vue"),
         },
         {
+          path: "search/hotel",
+          component:() => import("@/view/Hotel.vue")
+        },
+        {
           path: "data",
           name: "数据中心",
           component: () => import("@/view/DataCenter.vue"),
