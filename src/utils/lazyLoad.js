@@ -1,7 +1,4 @@
 //懒加载
-// 李建霆
-// 2024.5.6
-
 export default function lazyLoad() {
   const ob = new IntersectionObserver(
     (entries) => {

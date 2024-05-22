@@ -52,7 +52,7 @@ onMounted(() => {
   width: 100%;
   height: 600px;
   background-color: white;
-  border-top: 2px  solid #FF5353;
+  border-top: 2px solid #ff5353;
 }
 .aside-content::after {
   content: "";
