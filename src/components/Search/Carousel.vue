@@ -1,14 +1,22 @@
 <template>
   <div id="carousel_container">
     <el-carousel id="carousel">
-      <el-carousel-item v-for="item in 4" :key="item">
-        <img src="" alt="" />
+      <el-carousel-item v-for="item in carousel" :key="item.id">
+        <img :src="item.url" alt="" />
       </el-carousel-item>
     </el-carousel>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const carousel = ref([
+  {
+    id: 1,
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Rectangle%20131.png",
+  },
+]);
+</script>
 
 <style scoped>
 #carousel_container {

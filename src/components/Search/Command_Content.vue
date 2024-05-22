@@ -62,7 +62,6 @@ const props = defineProps({
 });
 let item = ref(props.item);
 
-
 const emits = defineEmits(["like"]);
 const handleLike = (id) => {
   // 执行点赞相关逻辑
@@ -119,11 +118,12 @@ hr {
 .content-title-text {
   position: relative;
   top: 10px;
-  font-size: 22px;
+  font-size: 20px;
   /* background-color: rgb(148, 49, 49); */
   position: relative;
   margin-left: 22px;
-
+  overflow: hidden;
+  text-overflow: ellipsis;  
   width: 100%;
   height: 60%;
 }

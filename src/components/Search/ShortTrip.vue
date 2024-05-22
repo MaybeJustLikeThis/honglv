@@ -54,7 +54,7 @@ onMounted(() => {
   height: 462px;
   width: 300px;
   background-color: white;
-  border-top: 2px  solid #FF5353;
+  border-top: 2px solid #ff5353;
 }
 .aside-content::after {
   content: "";
