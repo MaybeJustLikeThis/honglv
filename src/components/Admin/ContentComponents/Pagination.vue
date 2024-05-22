@@ -6,32 +6,32 @@
 </template>
 
 <script setup>
-import { ref, defineEmits, computed, watch } from "vue";
+import { ref, defineEmits, computed } from "vue";
 const emit = defineEmits(["changePage"]);
 // console.log("我渲染了")
-// const props = defineProps({
-//     dataProp: {
-//         type: Array,
-//         default: () => {}
-//     },
-//     lengthProp: {
-//         type: Number,
-//         default: 0,
-//     }
-// })
+const props = defineProps({
+    // dataProp: {
+    //     type: Array,
+    //     default: () => {}
+    // },
+    dataLength: {
+        type: Number,
+        default: 0,
+    }
+})
 // console.log("prop",props.dataProp)
-const totalPage = ref(2)
+const totalPage = ref(1)
 const currentPage = ref(1)
-const dataLength = ref(5)
-dataLength.value = localStorage.getItem("dataLength")
-totalPage.value = computed(() => Math.ceil(dataLength.value / 5)).value;
+// const dataLength = ref(5)
+// dataLength.value = localStorage.getItem("dataLength")
+totalPage.value = computed(() => Math.ceil(props.dataLength / 5)).value;
 
 const changePage = currentPage => {
     // currentPage.value += 1
     // console.log('update')
-    // defineEmits("changePageNow",currentPage)
-    totalPage.value = computed(() => Math.ceil(dataLength.value / 5)).value
+    totalPage.value = computed(() => Math.ceil(props.dataLength / 5)).value
     emit("changePage", currentPage)
+    console.log(currentPage)
     // console.log(props.scenicsProp.length)
 }
 </script>
