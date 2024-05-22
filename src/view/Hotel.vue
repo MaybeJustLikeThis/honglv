@@ -1,6 +1,8 @@
 <script setup >
 import Head from "@/components/Hotel/Head.vue"
 import Hot from '@/components/Hotel/Hot.vue'
+import GoodTravle from "@/components/Hotel/GoodTravle.vue"
+import textFour from "@/store/Hotel/core.js"
 
 </script>
 <template>
@@ -34,6 +36,7 @@ import Hot from '@/components/Hotel/Hot.vue'
     <div class="top-content">
        <Head></Head>
     </div>
+
     <div class="hot">
         <div class="hot-recommend">
             <span class="span-one">热门推荐</span>
@@ -46,6 +49,40 @@ import Hot from '@/components/Hotel/Hot.vue'
             </div>
         </div>
     </div>
+
+    <div class="goodtravel">
+        <span class="span-one">游玩好去处</span>
+        <GoodTravle></GoodTravle>
+    </div>
+
+   <div class="core-hotel">
+        <span class="span-one">精选主题住宿</span>
+        <!-- 不封装组件le，这里不改动 -->
+        <div class="core">
+            <div class="item" v-for="(item,index) in textFour" :key="index" :class="item.number+'-image'">
+                <div class="item-theme">{{item.theme}}</div>
+                <div class="item-text">{{item.text}}</div>
+            </div>
+        </div>
+   </div>
+
+   <div class="support-hotel">
+        <span class="span-one">品牌推荐</span>
+        <div class="ss">
+            <img class="item-support" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 164.png"/>
+            <img class="item-support" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 165.png"/>
+            <img class="item-support" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 166.png"/>
+            <img class="item-support" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 167.png"/>
+            <img class="item-support" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 168.png"/>
+            <img class="item-support" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 170.png"/>
+            <img class="item-support" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 169.png"/>
+            <img class="item-support" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 171.png"/>
+            <img class="item-support" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 171.png"/>
+            <img class="item-support" src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 172.png"/>
+        </div>
+   </div>
+     
+   
    
 </div>
 
@@ -154,5 +191,56 @@ import Hot from '@/components/Hotel/Hot.vue'
     margin:16px 0;
     font-size:20px;
     color: #333333;
+}
+
+.goodtravel{
+    margin-top:40px;
+}
+
+.core{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item{
+    height: 318px;
+    width: 260px;
+   
+}
+
+.one-image{
+    background-image: url('https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 163 (3).png');
+}
+
+.two-image{
+    background-image: url('https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 163 (2).png');
+}
+
+
+.three-image{
+    background-image: url("https://xuejiangbin.oss-cn-beijing.aliyuncs.com/Rectangle 163 (1).png");
+}
+
+
+.four-iamge{
+    background-image: url("https://xuejiangbin.oss-cn-beijing.aliyuncs.com/2.png");
+}
+
+.item-theme{
+    margin-top:22px;
+    margin-left: 22px;
+    color: white;
+    font-size:16px;
+}
+
+.item-text{
+    color: white;
+    margin-left: 22px;
+    font-size: 12px;
+}
+
+.ss{
+    display: flex;
+    justify-content: space-between;
 }
 </style>

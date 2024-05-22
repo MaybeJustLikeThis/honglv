@@ -23,5 +23,4 @@ const textOne =
     ]
 
 
-
 export default textOne
