@@ -23,6 +23,10 @@ const router = createRouter({
       name: "首页",
       children: [
         {
+          path: "detail",
+          component: () => import("../view/Details/InformationDetails.vue"),
+        },
+        {
           path: "blog",
           name: "上传博客",
           component: () => import("@/view/BlogEdit/BlogEdit.vue"),
