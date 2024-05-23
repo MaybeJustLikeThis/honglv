@@ -12,7 +12,7 @@
             <admin-body-nav @spanclk="getCurrentManageData"></admin-body-nav>
           </div>
         </div>
-        
+
         <div class="body_right">
 
           <router-view></router-view>
@@ -35,18 +35,23 @@ import AdminBodyNav from '../components/Admin/AdminBodyNav.vue';
 import BreadCrumb from '../components/Admin/ContentComponents/BreadCrumb.vue';
 // import AdminMessage from '../components/Admin/ContentComponents/AdminMessage.vue'
 import { useRouter } from 'vue-router'
+// import { ref} from 'vue'
 
 const router = useRouter()
+// const refreshCpn = ref(0)
 const getCurrentManageData = payload => {
   console.log("getCurrentManageData调用")
   console.log("payload",payload)
   router.push({
     path: `/AdminCenter/${payload.title}`,
+    // name:payload.name,
     query: {
       url: payload.url,
       name: payload.name,
     }
   })
+  // refreshCpn.value++;
+
 }
 
 </script>

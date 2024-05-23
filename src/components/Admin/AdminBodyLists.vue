@@ -22,7 +22,7 @@
                 </slot>
             </div>
 
-            <div class="extra">
+            <!-- <div class="extra">
                 <div class="data">
                     <slot name="data">
                         2022-06-15 18:18:05
@@ -40,7 +40,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
         </div>
 
         <slot name="img">
@@ -73,19 +73,19 @@ const deleteClick = () => {
 .text{
     display: flex;
     flex-direction: column;
-    justify-content:space-around ;
+    justify-content:center;
     margin-left: 30px;
 }
 .title{
     display: block;
     /* margin:0; */
     font-family: Abel;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
-    line-height: 17.84px;
+    line-height: 13px;
     text-align: left;
-    width: 275px;
-    height: 18px;
+    /* width: 275px; */
+    /* height: 13px; */
     color: rgba(51, 51, 51, 1);
     margin-top:20px ;
 }
@@ -93,13 +93,13 @@ const deleteClick = () => {
     font-family: Abel;
     font-size: 10px;
     font-weight: 400;
-    line-height: 12.74px;
+    line-height: 10px;
     text-align: left;
     color:rgba(102, 102, 102, 1);
     display: inline-block;
     margin:0;
     /* width: 121px; */
-    height: 13px;
+    /* height: 13px; */
     margin-top:15px;
 
 }
