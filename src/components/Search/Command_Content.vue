@@ -13,7 +13,7 @@
           来自
           <span class="content-from-text">{{ from }}</span>
         </div>
-        <div class="content-title-text">{{ item.title }}</div>
+        <div class="content-title-text">{{ item.name }}</div>
       </div>
       <div class="content-title-right">
         <div class="content-like">
@@ -27,9 +27,11 @@
       </div>
     </div>
     <div class="content-text">
-      <div class="content-picture"><img :src="picture" alt="推荐攻略" /></div>
+      <div class="content-picture">
+        <img :src="item.pictures" alt="推荐攻略" />
+      </div>
       <div class="text-content">
-        <p>{{ text }}</p>
+        <p>{{ item.summary }}</p>
       </div>
       <div class="content-user">
         <span>{{ user_name }}</span> <span>{{ view_num }}浏览</span>
@@ -53,14 +55,14 @@ let view_num = ref(666);
 let comments_num = ref(50);
 let picture = ref("");
 let like_num = ref(0);
-
 const props = defineProps({
   item: {
-    data: Object,
+    type: Object,
     required: true,
   },
 });
 let item = ref(props.item);
+console.log(item.value);
 
 const emits = defineEmits(["like"]);
 const handleLike = (id) => {
@@ -123,7 +125,7 @@ hr {
   position: relative;
   margin-left: 22px;
   overflow: hidden;
-  text-overflow: ellipsis;  
+  text-overflow: ellipsis;
   width: 100%;
   height: 60%;
 }

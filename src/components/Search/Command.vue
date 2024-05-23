@@ -3,7 +3,7 @@
     <div class="command-title">推荐攻略</div>
     <div class="command-content">
       <Command_Content
-        v-for="(item, index) in data"
+        v-for="(item, index) in da  ta"
         :key="index"
         :item="item"
         @like="handleLike"
@@ -15,7 +15,7 @@
 <script setup>
 import Command_Content from "@/components/Search/Command_Content.vue";
 import { ref, onMounted } from "vue";
-import { getTOPInformation } from "../../utils/api/index.js";
+import { getHomeTOPRoute } from "../../utils/api/index.js";
 let data = ref();
 
 function handleLike(id, like_type) {
@@ -23,7 +23,7 @@ function handleLike(id, like_type) {
   console.log(id);
 }
 onMounted(() => {
-  getTOPInformation()
+  getHomeTOPRoute()
     .then((res) => {
       // console.log(res.data);
       data.value = res.data;
@@ -52,7 +52,7 @@ onMounted(() => {
   border-top: 2px solid #ff5353;
   position: relative;
   width: 100%;
-  height: 1510px;
+  height: 1210px;
   background-color: white;
   /* max-width: 1200px; */
 }
