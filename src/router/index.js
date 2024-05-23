@@ -81,6 +81,36 @@ const router = createRouter({
           component: () => import("@/view/Search.vue"),
         },
         {
+          path: "search/routes",
+          name: "路线分页",
+          component: () => import("@/components/Search/Search_Routes.vue"),
+        },
+        {
+          path: "search/attractions",
+          name: "景点分页",
+          component: () => import("@/components/Search/Search_Attractions.vue"),
+        },
+        {
+          path: "search/news",
+          name: "咨询分页",
+          component: () => import("@/components/Search/Search_News.vue"),
+        },
+        {
+          path: "search/strategies",
+          name: "攻略分页",
+          component: () => import("@/components/Search/Search_Strategy.vue"),
+        },
+        {
+          path: "Search/Commodities",
+          name: "文创分页",
+          component: () => import("@/components/Search/Search_Commodities.vue"),
+        },
+        {
+          path: "Search/Foods",
+          name: "美食分页",
+          component: () => import("@/components/Search/Search_Foods.vue"),
+        },
+        {
           path: "search/hotel",
           component: () => import("@/view/Hotel.vue"),
         },
@@ -110,16 +140,17 @@ const router = createRouter({
     {
       path: "/AdminCenter",
       component: AdminCenter,
+      name: "后台管理",
       children: [
         {
           path: "",
           redirect: "/AdminCenter/AllAttractions",
         },
-        {
-          path: "AllAttractions",
-          component: () =>
-            import("../components/Admin/ContentComponents/AdminMessage.vue"),
-        },
+        // {
+        //   path: "AllAttractions",
+        //   component: () =>
+        //     import("../components/Admin/ContentComponents/AdminMessage.vue"),
+        // },
         {
           path: ":title",
           component: () =>

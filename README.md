@@ -38,6 +38,8 @@
 │  │ vite.config.js # vite配置文件
 ```
 
+
+"红侣" 红色旅行网 
 本项目是一个基于 Vite3 搭建的 Vue3 项目模板，集成了JavaScript、Vue Router、Axios、ESLint
 
 运行环境： VSCode、**Node16+**、 VSCode 插件：Vue Language Features (Volar)、Prettier - Code formatter
