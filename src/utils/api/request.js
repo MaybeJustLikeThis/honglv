@@ -5,6 +5,7 @@
 
 // 导入axios
 import axios from "axios";
+import { ElMessage } from "element-plus";
 
 //1. 创建新的axios实例，
 const service = axios.create({
@@ -51,6 +52,9 @@ service.interceptors.response.use(
 
     if (status == 333) {
       //后续路由跳转
+    }
+    if (status == 304) {
+      ElMessage("请您先登录！");
     }
     if (status !== 200) {
       alert("错误" + status + "  " + message);

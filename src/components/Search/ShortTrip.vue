@@ -98,10 +98,11 @@ onMounted(() => {
   margin-bottom: 10px; /* Adjust margin for spacing */
   color: rgba(102, 102, 102, 1);
   font-family: Inter;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 12.1px;
   text-align: left;
+   z-index: 1000;
 }
 .subtitle {
   position: relative;
@@ -112,6 +113,6 @@ onMounted(() => {
   font-weight: 400;
   line-height: 16.94px;
   text-align: left;
-  color: rgba(102, 102, 102, 1);
+  z-index: 1000;
 }
 </style>

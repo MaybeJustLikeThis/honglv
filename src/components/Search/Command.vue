@@ -3,7 +3,7 @@
     <div class="command-title">推荐攻略</div>
     <div class="command-content">
       <Command_Content
-        v-for="(item, index) in da  ta"
+        v-for="(item, index) in data"
         :key="index"
         :item="item"
         @like="handleLike"
