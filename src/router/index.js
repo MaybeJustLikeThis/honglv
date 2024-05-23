@@ -134,6 +134,10 @@ if (isLogin) {
     path: "/login",
     component: () => import("@/view/Login.vue"),
   });
+  router.addRoute("/enroll", {
+    path: "/enroll",
+    component: () => import("@/view/enroll.vue"),
+  });
 }
 
 //前置导航守卫(部分地方用)
