@@ -9,9 +9,18 @@
     <div class="cover-description">
       一张不低于640*188像素的图片（非gif格式）
     </div>
-    <button class="upload-button">上传封面</button>
+    <input type="file" hidden ref="fileInput" multiple />
+    <button class="upload-button" @click="getFile">上传封面</button>
   </section>
 </template>
+
+<script setup>
+import { ref } from "vue";
+const fileInput = ref(null);
+function getFile() {
+  fileInput.value.click();
+}
+</script>
 
 <style scoped>
 .cover-container {
