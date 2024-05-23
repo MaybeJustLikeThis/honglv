@@ -12,10 +12,8 @@ const service = axios.create({
   baseURL: "http://39.105.232.187:8080/",
   // mock接口
 
- 
-
   // baseURL:'api',
-  
+
   // 超时时间 单位是ms，这里设置了3s的超时时间
   timeout: 3 * 1000,
   responseType: "json",

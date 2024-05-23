@@ -44,8 +44,8 @@ onMounted(() => {
 }
 
 .command-title {
-  font-size: 32px;
-  color: #161414;
+  font-size: 24px;
+  color: rgba(102, 102, 102, 1);
   margin-bottom: 20px;
 }
 .command-content {
