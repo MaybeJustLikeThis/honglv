@@ -29,7 +29,7 @@ service.interceptors.request.use(
       "Content-Type": "application/json", //配置请求头
     };
 
-    const token = localStorage.getItem("token"); //这里取token之前，你肯定需要先拿到token,存一下
+    const token = localStorage.getItem("Honglv_token"); //这里取token之前，你肯定需要先拿到token,存一下
     // console.log(token);
 
     if (token) {
@@ -48,7 +48,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (res) => {
     const status = res.data.code || 200;
-    const message = res.data.message || "未知错误";
+    const message = res.data.msg || "未知错误";
 
     if (status == 333) {
       //后续路由跳转
@@ -57,7 +57,7 @@ service.interceptors.response.use(
       ElMessage("请您先登录！");
     }
     if (status !== 200) {
-      alert("错误" + status + "  " + message);
+      ElMessage("错误" + status + "  " + message);
     }
     return res.data;
   },

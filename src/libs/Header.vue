@@ -15,13 +15,31 @@
         <router-link to="/honglv/data" class="nav_box">数据中心</router-link>
       </div>
 
-      <router-link to="/login" class="login">登录/注册</router-link>
+      <router-link to="/login" class="login" v-if="isExist"
+        >登录/注册</router-link
+      >
+      <router-link to="/PersonalCenter" class="login" v-if="!isExist"
+        >个人中心</router-link
+      >
     </div>
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+import { ref, onMounted } from "vue";
+let isExist = ref(true);
+
+const isLogin = () => {
+  const token = localStorage.getItem("Honglv_token");
+  if (token == null || undefined) {
+    isExist.value = true;
+  } else {
+    isExist.value = false;
+  }
+};
+onMounted(() => {
+  isLogin();
+});
 </script>
 
 <style scoped>

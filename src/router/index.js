@@ -153,6 +153,27 @@ const router = createRouter({
         },
       ],
     },
+    {
+      path: "/PersonalCenter",
+      component: () => import("@/view/PersonalCenter/PersonalCenter.vue"),
+      redirect: "/PersonalCenter/info",
+      children: [
+        {
+          path: "info",
+          component: () =>
+            import("@/components/PersonalCenter/CenterEdit/Info.vue"),
+        },
+        {
+          path: "changePassword",
+          component: () =>
+            import("@/components/PersonalCenter/CenterEdit/ChangePassword.vue"),
+        },
+        {
+          path: "logout",
+          component: () => import("@/components/PersonalCenter/logout.vue"),
+        },
+      ],
+    },
   ],
 });
 
@@ -172,7 +193,7 @@ if (isLogin) {
 
 //前置导航守卫(部分地方用)
 router.beforeEach((to, from) => {
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("Honglv_token");
   // if (!token && to.path == "/xxx") {
   //   return "/login";
   // }

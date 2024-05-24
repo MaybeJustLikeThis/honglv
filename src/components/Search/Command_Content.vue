@@ -1,43 +1,48 @@
 <template>
   <div class="content-box">
-    <div class="content-title">
-      <div class="content-title-left">
-        <div class="content-from">
-          <div class="content-like-icon" style="width: 30px">
-            <img
-              src="../../../public/home/美食.svg"
-              alt="来自"
-              style="width: 20px"
-            />
-          </div>
-          来自
-          <span class="content-from-text">{{ from }}</span>
-        </div>
-        <div class="content-title-text">{{ item.name }}</div>
-      </div>
-      <div class="content-title-right">
-        <div class="content-like">
-          <el-button round class="content-like-btn" @click="handleLike(item.id)"
-            >{{ like_num }} 点赞
-            <div class="content-like-icon">
-              <img src="../../../public/home/点赞_块.svg" alt="点赞" />
+    <router-link to="">
+      <div class="content-title">
+        <div class="content-title-left">
+          <div class="content-from">
+            <div class="content-like-icon" style="width: 30px">
+              <img
+                src="../../../public/home/美食.svg"
+                alt="来自"
+                style="width: 20px"
+              />
             </div>
-          </el-button>
+            来自
+            <span class="content-from-text">{{ from }}</span>
+          </div>
+          <div class="content-title-text">{{ item.name }}</div>
+        </div>
+        <div class="content-title-right">
+          <div class="content-like">
+            <el-button
+              round
+              class="content-like-btn"
+              @click="handleLike(item.id)"
+              >{{ like_num }} 点赞
+              <div class="content-like-icon">
+                <img src="../../../public/home/点赞_块.svg" alt="点赞" />
+              </div>
+            </el-button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="content-text">
-      <div class="content-picture">
-        <img :src="item.pictures" alt="推荐攻略" />
+      <div class="content-text">
+        <div class="content-picture">
+          <img :src="item.pictures" alt="推荐攻略" />
+        </div>
+        <div class="text-content">
+          <p>{{ item.summary }}</p>
+        </div>
+        <div class="content-user">
+          <span>{{ user_name }}</span> <span>{{ view_num }}浏览</span>
+          <span> {{ comments_num }}评论</span>
+        </div>
       </div>
-      <div class="text-content">
-        <p>{{ item.summary }}</p>
-      </div>
-      <div class="content-user">
-        <span>{{ user_name }}</span> <span>{{ view_num }}浏览</span>
-        <span> {{ comments_num }}评论</span>
-      </div>
-    </div>
+    </router-link>
   </div>
   <hr />
 </template>
