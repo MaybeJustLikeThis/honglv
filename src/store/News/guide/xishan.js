@@ -19,5 +19,9 @@ const text = `
 汾河二桥“西山晓月”吸引了大批市民前来观赏。正在给孩子照相的市民说:“夜景亮化了，古交更美了，我原来每天晚上在城区遛弯儿，现在改到各个公园遛弯儿了，一边欣赏夜景一边健身，一举两得，真是太幸福了!”经过亮化打造的古交华灯璀璨、五彩斑斓。以城市照明亮化为牵引，古交的城市面貌发生了新变化，一批城区道路、公园绿地等基础设施建设集中实施，城市空间宽敞通透了，城市的气韵越来越有魅力了。
 `;
 
+const introduction =
+  "每当夜幕降临，华灯初上，古交市火山二桥在月光映照下与汾河交相辉映，构成一幅诗意画卷。火山二桥是古交市第一座汾河景观桥，长218米，宽27米，于2021年通车。其“西山晓月”照明设计结合优美的拱形造型，夜晚的灯光如同弦月升起，成为新的城市地标。";
+const headImgURL =
+  "https://cdn.builder.io/api/v1/image/assets/TEMP/17841ee881726c0fbae658eec9c5e9d7a10ed8a2fc3463abde0ffbb61410733c?apiKey=c94cf1206d5a44cea72bfa67327d7693&";
 export default text;
-export { title, msg, text };
+export { introduction, headImgURL, title, msg, text };

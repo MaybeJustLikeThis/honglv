@@ -25,5 +25,9 @@ const text = `
 2004年，山西省人民政府将千佛寺列为全省重点文物保护单位。2013年3月，公布其为第七批全国重点文物保护单位，千佛名胜，永载史册。
 `;
 
+const introduction =
+  "千佛寺是古交市著名的古刹，位于市区南端，两川相夹，背山临水，庙貌庄严古朴，距今已有千年历史。寺内有千余尊石雕像，因而得名。寺庙坐落于古交市金牛东大街杨家坡，最早创立于唐代，1992年因城市建设搬迁至现址。主殿大雄宝殿以及天王殿、钟楼、鼓楼等建筑雄伟壮丽。";
+const headImgURL =
+  "https://cdn.builder.io/api/v1/image/assets/TEMP/4f2ba4f22506278e2d4b98d2b9be38ce3b05a2297017360d13b9b6a16650d981?apiKey=c94cf1206d5a44cea72bfa67327d7693&";
 export default text;
-export { title, msg, text };
+export { introduction, headImgURL, title, msg, text };

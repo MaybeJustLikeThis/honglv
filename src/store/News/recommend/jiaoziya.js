@@ -26,5 +26,9 @@ const text = `
 青山碧水下，这里宛如澳洲海岛，又像是北欧山巅。网友说这里像国家地理的封面，也像电视剧里的美景……所见即所想，不用出国也可感受国际范的目的地，这里是太原。
 [img:https://cdn.builder.io/api/v1/image/assets/TEMP/d63ab310f7bc31278f1a4f2b5a83b2a8e94f09082e4a49f527487f3f1fa941a8?apiKey=c94cf1206d5a44cea72bfa67327d7693&]
 `;
+const introduction =
+  "角子崖地理位置独特，地形地貌奇绝，有着悠久的人文历史和自然风光。景区内的山水峡谷、自然景观让人仿佛置身于一个神秘的世界。";
+const headImgURL =
+  "https://cdn.builder.io/api/v1/image/assets/TEMP/e6615de9aa66a77848d7e69a544d037457c5495c345ccb8c9340513d7f6fcada?apiKey=c94cf1206d5a44cea72bfa67327d7693&";
 export default text;
-export { title, msg, text };
+export { introduction, headImgURL, title, msg, text };

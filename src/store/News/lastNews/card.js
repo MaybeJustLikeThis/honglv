@@ -52,5 +52,9 @@ const text = `
 山西晚报记者  徐麦丽  实习生 李潇睿
 `;
 
+const introduction =
+  "古交这座城市承载着丰富的历史传承和文化遗产，让人感受到她的古老和神秘。从旧石器时代的古交遗址到英雄故里的晋绥八分区旧址，古交展现出了令人惊叹的历史价值和英雄气概。同时，现代的古交也展现出了蓝天白云的美丽风景和充满活力的城市面貌。这里的自然风光和人文景观交相辉映，使得古交成为一个值得一游的地方，让人流连忘返。";
+const headImgURL =
+  "https://cdn.builder.io/api/v1/image/assets/TEMP/17efcc266170584daf2244b0e75d52600f5a2dfd41e618a82919ad00d8f32077?apiKey=c94cf1206d5a44cea72bfa67327d7693&";
 export default text;
-export { title, msg, text };
+export { introduction, headImgURL, title, msg, text };
