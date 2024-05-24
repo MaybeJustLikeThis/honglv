@@ -7,7 +7,7 @@
   align-items: start;
 }
 .typeArea {
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
   align-self: stretch;
   display: flex;
   margin-top: 23px;

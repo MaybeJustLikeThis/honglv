@@ -7,13 +7,13 @@
       />
       <div class="articleMsg">
         <div class="articleTitle">
-          <h1 class="title">走！“寻找河东最美春天”</h1>
-          <p class="id">id:16492263</p>
+          <h1 class="title">{{ title }}</h1>
         </div>
         <div class="userMsg">
-          <div class="userName">热心小黑</div>
-          <div class="publishedDate">发表于:2024-03-20 16:39:02</div>
-          <div class="viewTimes">浏览数:2135</div>
+          <p class="id">id:16492263</p>
+          <div class="userName">{{ msg.from }}</div>
+          <div class="publishedDate">发表于:{{ msg.date }}</div>
+          <div class="viewTimes">浏览数:{{ msg.view }}</div>
         </div>
       </div>
     </div>
@@ -51,6 +51,12 @@
   </div>
 </template>
 
+<script setup>
+import { defineProps } from "vue";
+const props = defineProps(["title", "msg"]);
+console.log(props);
+</script>
+
 <style scoped>
 .banner {
   width: 100vw;
@@ -65,10 +71,21 @@
 }
 .msgShow {
   display: flex;
-  width: 40vw;
+  width: 40em;
+  height: 8em;
   flex-direction: row;
-  transform: translateY(50%);
-  padding-bottom: 50px;
+  transform: translateY(11.5em);
+  padding-bottom: 100px;
+}
+.msgShow .avatar {
+  width: 100px;
+  height: 100px;
+}
+.articleMsg {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+  justify-content: center;
 }
 .btnArea {
   gap: 20px;
@@ -85,10 +102,12 @@
 
 .articleMsg .articleTitle {
   display: flex;
+  margin-top: 0;
   flex-direction: row;
 }
-.articleMsg .articleTitle .id {
-  line-height: 4em;
+.articleMsg .articleTitle .title,
+.id {
+  margin: 0;
 }
 .separator {
   width: 1px;
