@@ -23,6 +23,9 @@ const text = `
 [img:https://cdn.builder.io/api/v1/image/assets/TEMP/c4c4ad04a5d4af66f1a5f0c25278f04200d89db2bdc84eea23f4128a81b1aab0?apiKey=c94cf1206d5a44cea72bfa67327d7693&]
 [img:https://cdn.builder.io/api/v1/image/assets/TEMP/0c11df11a4e7d5d57e09d68f1097ff845be3247387488156da45c4e7bf34b113?apiKey=c94cf1206d5a44cea72bfa67327d7693&]
 `;
-
+const introduction =
+  "千佛寺是古交市著名的古刹，位于市区南端，两川相夹，背山临水，庙貌庄严古朴，距今已有千年历史。寺内有千余尊石雕像，因而得名。寺庙坐落于古交市金牛东大街杨家坡，最早创立于唐代，1992年因城市建设搬迁至现址。主殿大雄宝殿以及天王殿、钟楼、鼓楼等建筑雄伟壮丽。";
+const headImgURL =
+  "https://cdn.builder.io/api/v1/image/assets/TEMP/7a37f55ab7b5af575c581bb5a9a0945d4f5e69d06acde755067f0c1345f20d3c?apiKey=c94cf1206d5a44cea72bfa67327d7693&";
 export default text;
-export { title, msg, text };
+export { introduction, headImgURL, title, msg, text };
