@@ -4,7 +4,7 @@
       <div id="search_header_left">
         <div class="secondaryMenu">
           <SecondaryMenu message="目的地城市选择" />
-          <SecondaryMenu message="咨询种类选择" />
+          <check_content message="咨询种类选择" />
         </div>
         <div class="carousel"><Carousel /></div>
       </div>
@@ -25,6 +25,7 @@ import ShortTrip from "@/components/Search/ShortTrip.vue";
 import Carousel from "@/components/Search/Carousel.vue";
 import Carouselsp from "@/components/Search/Carousel_sp.vue";
 import Command from "@/components/Search/Command.vue";
+import check_content from "@/components/Search/check_content.vue";
 </script>
 
 <style scoped>

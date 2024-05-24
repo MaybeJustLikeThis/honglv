@@ -4,16 +4,21 @@ let index = ref(0);
 import { useRouter } from 'vue-router'
 import {postVerification,postLogin,postV} from "@/utils/api/adminApi/Enroll.js"
 let router = useRouter()
+let password = ref()
+let phone = ref()
 
 
 function login(){
     postLogin(
         {
-            "password": password,
-            "phone": phone
-        }   
+            loginByPasswordDTO:{
+            password: password,
+            phone: phone
+            }   
+        }
+      
     ).then(res=>{
-        console.log(res.data,"登录信息1");
+        console.log(res,"登录信息1");
     })
 }
 
@@ -21,15 +26,19 @@ function login(){
 function loginTwo(){
     new Promise(()=>{
         postVerification({
-            "phone": phone,
-            "status": 0
+            loginByCodeDTO:{
+                phone: phone,
+                status: 0
+            }
         }).then(res=>{
             resolve(res.data.code)
         })
     }).then(resolve=>{
         postV({
-            "code": resolve,
-            "phone": phone
+        sendCodeDTO:{
+            code: resolve,
+            phone: phone
+        }
         }).then(res=>{
             console.log(res.data,"登录信息2");
         })

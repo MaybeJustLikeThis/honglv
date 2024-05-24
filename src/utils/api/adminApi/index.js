@@ -4,6 +4,10 @@ function getAllAttractions() {
   return request({
     url: "/attraction/getAllAttractions",
     method: "get",
+    params: {
+      page: 1,
+      pageSize: 5,
+    }
   });
 }
 

@@ -5,6 +5,7 @@
 
 // 导入axios
 import axios from "axios";
+import { ElMessage } from "element-plus";
 
 //1. 创建新的axios实例，
 const service = axios.create({
@@ -12,9 +13,8 @@ const service = axios.create({
   baseURL: "http://39.105.232.187:8080/",
   // mock接口
 
-  
   // baseURL:'api',
-  
+
   // 超时时间 单位是ms，这里设置了3s的超时时间
   timeout: 3 * 1000,
   responseType: "json",
@@ -52,6 +52,9 @@ service.interceptors.response.use(
 
     if (status == 333) {
       //后续路由跳转
+    }
+    if (status == 304) {
+      ElMessage("请您先登录！");
     }
     if (status !== 200) {
       alert("错误" + status + "  " + message);

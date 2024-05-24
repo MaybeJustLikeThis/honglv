@@ -15,7 +15,7 @@
 <script setup>
 import Command_Content from "@/components/Search/Command_Content.vue";
 import { ref, onMounted } from "vue";
-import { getTOPInformation } from "../../utils/api/index.js";
+import { getHomeTOPRoute } from "../../utils/api/index.js";
 let data = ref();
 
 function handleLike(id, like_type) {
@@ -23,7 +23,7 @@ function handleLike(id, like_type) {
   console.log(id);
 }
 onMounted(() => {
-  getTOPInformation()
+  getHomeTOPRoute()
     .then((res) => {
       // console.log(res.data);
       data.value = res.data;
@@ -44,15 +44,15 @@ onMounted(() => {
 }
 
 .command-title {
-  font-size: 32px;
-  color: #161414;
+  font-size: 24px;
+  color: rgba(102, 102, 102, 1);
   margin-bottom: 20px;
 }
 .command-content {
   border-top: 2px solid #ff5353;
   position: relative;
   width: 100%;
-  height: 1510px;
+  height: 1210px;
   background-color: white;
   /* max-width: 1200px; */
 }

@@ -1,6 +1,6 @@
 .root {
   align-items: center;
-  background-color: #fff;
+  /* background-color: #fff; */
   display: flex;
   flex-direction: column;
 }
