@@ -112,6 +112,7 @@ const router = createRouter({
         },
         {
           path: "search/hotel",
+          name: "酒店分页",
           component: () => import("@/view/Hotel.vue"),
         },
         {

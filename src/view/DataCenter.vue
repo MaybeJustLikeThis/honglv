@@ -1,5 +1,4 @@
 <template>
-  <!-- <Header></Header> -->
   <div class="all">
     <div class="navigator">
       <div class="div-14">首页</div>
@@ -54,14 +53,10 @@
       </div>
     </div>
   </div>
-
-  <!-- <Bottom></Bottom> -->
 </template>
 
 <script setup>
 import * as echarts from "echarts";
-import Header from "@/libs/header.vue";
-import Bottom from "@/libs/Home_Bottom/Bottom.vue";
 
 import { onMounted, ref } from "vue";
 const mychart = ref();
