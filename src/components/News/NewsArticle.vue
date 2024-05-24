@@ -1,12 +1,31 @@
 <template>
   <div class="article">
-    <NewsImage></NewsImage>
-    说起古交，您的第一感觉是什么？是不是还停留在那个灰蒙蒙、黑乎乎的印象里？<br />
-    9月26日、27日，“寻访山西文化新名片”大型融媒体主题采访活动走进古交市，山西晚报记者第一眼看到的是这里的蓝天白云，不禁感慨：原来是“煤”城，现在是美城。<br />
+    <p v-for="(paragraph, index) in paragraphs" :key="index">
+      &emsp;&emsp;<span v-html="resolveImage(paragraph)"></span>
+    </p>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { defineProps } from "vue";
+
+const props = defineProps(["text"]);
+const text = props.text;
+//获取段落
+const paragraphs = text.split("\n").filter((p) => p.trim().length > 0);
+
+function resolveImage(paragraph) {
+  // 检查段落中是否包含图片占位符
+  if (paragraph.includes("[img:")) {
+    // 使用正则表达式匹配图片占位符
+    let imgUrl = paragraph.trim().substring(5, paragraph.length - 1);
+    return `<img src="${imgUrl}" alt="Image ${imgUrl}" style="margin: 0 auto; position: relative; display: flex; width: 480px; justify-content: center;">`;
+  } else {
+    // 如果图片资源不存在，则返回空字符串或者其他提示信息
+    return paragraph;
+  }
+}
+</script>
 
 <style scoped>
 .article {
@@ -17,7 +36,7 @@
   width: 1036px;
   max-width: 100%;
   justify-content: center;
-  margin: 30px 0;
+  margin: 0;
   padding: 50px 48px 69px;
 }
 </style>

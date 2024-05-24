@@ -1,6 +1,14 @@
 html {
   margin: 0px;
+  background-color: #ffffff;
+  /* max-height: 2400px; */
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   margin: 0px;
   height: 100%;
@@ -8,4 +16,9 @@ body {
   min-height: 100%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  background-color: #b83636;
+  background-color: #ffffff;
+}
+*:focus-within {
+  outline: rgb(182, 68, 53);
 }

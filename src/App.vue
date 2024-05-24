@@ -1,24 +1,9 @@
 <template>
-  <Home></Home>
-  <!-- <News></News> -->
-  <!-- <Blog></Blog> -->
-  <!-- <Push></Push> -->
+  <router-view></router-view>
 </template>
 
-<script>
-import Home from "./view/Home.vue";
-import News from "./view/News.vue";
-import Blog from "./view/Blog.vue";
-
-
-export default {
-  components: {
-    Home,
-    News,
-    Blog,
-   
-  },
-};
+<script setup>
+import Header from "@/libs/Header.vue";
 </script>
 
 <style scoped></style>

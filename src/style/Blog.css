@@ -6,7 +6,7 @@
 }
 
 .horizontalLine {
-  background-color: #7f0505;
+  background-color: #ff5353;
   align-self: center;
   width: 1121px;
   max-width: 100%;
@@ -55,7 +55,7 @@
   margin-right: 15px;
   width: 4px;
   height: 20px;
-  background: #d40000;
+  background: #ff5353;
 }
 
 .container .article .titleBox {

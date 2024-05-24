@@ -4,33 +4,32 @@
     <div class="main">
       <BreadCrumbs></BreadCrumbs>
       <div class="typeArea">
-        <NewsHeader></NewsHeader>
-        <NewsImage></NewsImage>
-        <NewsArticle></NewsArticle>
+        <NewsHeader :title="data.title" :msg="data.msg"></NewsHeader>
+        <NewsArticle :text="data.text"></NewsArticle>
       </div>
     </div>
     <Bottom></Bottom>
   </div>
 </template>
 
-<script>
-import Header from "@/components/header.vue";
-import Bottom from "@/components/Home_Bottom/Bottom.vue";
+<script setup>
+import { ref } from "vue";
+
+import Header from "@/libs/header.vue";
+import Bottom from "@/libs/Home_Bottom/Bottom.vue";
 import BreadCrumbs from "@/components/News/BreadCrumbs.vue";
 import NewsHeader from "@/components/News/NewsHeader.vue";
-import NewsImage from "@/components/News/NewsImage.vue";
 import NewsArticle from "@/components/News/NewsArticle.vue";
+import { useRoute } from "vue-router";
 
-export default {
-  components: {
-    Header,
-    BreadCrumbs,
-    NewsHeader,
-    NewsImage,
-    NewsArticle,
-    Bottom,
-  },
-};
+const route = useRoute();
+const data = ref("");
+
+import(`@/store/News/${route.query.store}/${route.query.page}.js`).then(
+  (module) => {
+    data.value = module;
+  }
+);
 </script>
 
 <style scoped>
@@ -40,7 +39,7 @@ export default {
   align-items: center;
   background-color: #fff;
   display: flex;
-  padding-top: 43px;
+  /* padding-top: 43px; */
   flex-direction: column;
 }
 </style>
