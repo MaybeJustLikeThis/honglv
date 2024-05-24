@@ -5,6 +5,8 @@ const msg = {
   date: "2019-03-12 15:25:33",
   view: 16,
   star: 2,
+  like: 15,
+  share: 30,
 };
 
 const text = `
@@ -25,5 +27,9 @@ const text = `
 [img:https://cdn.builder.io/api/v1/image/assets/TEMP/1f1754648779f5109d0fbdda757b0ab0f4f0b13e7f3ec202c1c519df556a56d9?apiKey=c94cf1206d5a44cea72bfa67327d7693&]
 `;
 
+const introduction =
+  "古交市气候属北温带大陆性，适合全年游览。灵塔原位于刘庄，2001年遭盗掘后搬迁至千佛寺现址，成为当地重要的历史文化景点。";
+const headImgURL =
+  "https://cdn.builder.io/api/v1/image/assets/TEMP/a6f8e107550da6145ffa815e47a1280f1e108b3aca3a37ae4bdb6b435437eb25?apiKey=c94cf1206d5a44cea72bfa67327d7693&";
 export default text;
-export { title, msg, text };
+export { introduction, headImgURL, title, msg, text };

@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <guide></guide>
+    <guide :introduction="introduction"></guide>
     <div class="article">
       <p v-for="(paragraph, index) in paragraphs" :key="index">
         &emsp;&emsp;<span v-html="resolveImage(paragraph)"></span>
@@ -13,7 +13,7 @@
 import guide from "./cpns/guide.vue";
 import { defineProps } from "vue";
 
-const props = defineProps(["text"]);
+const props = defineProps(["text", "introduction"]);
 const text = props.text;
 //获取段落
 const paragraphs = text.split("\n").filter((p) => p.trim().length > 0);

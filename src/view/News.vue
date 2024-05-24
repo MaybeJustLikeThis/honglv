@@ -4,11 +4,18 @@
     <div class="main">
       <BreadCrumbs></BreadCrumbs>
       <div>
-        <banner :title="data.title" :msg="data.msg"></banner>
+        <banner
+          :title="data.title"
+          :msg="data.msg"
+          :headImgURL="data.headImgURL"
+        ></banner>
         <div class="root">
           <section class="content-section container">
             <!-- <NewsArticle :text="data.text"></NewsArticle> -->
-            <container :text="data.text"></container>
+            <container
+              :text="data.text"
+              :introduction="data.introduction"
+            ></container>
             <!-- <slider :data="data"></slider> -->
           </section>
         </div>
@@ -24,7 +31,7 @@ import container from "./Details/container.vue";
 import banner from "./Details/cpns/banner.vue";
 // import slider from "./Details/slider.vue";
 import Header from "@/libs/header.vue";
-import NewsArticle from "@/components/News/NewsArticle.vue";
+// import NewsArticle from "@/components/News/NewsArticle.vue";
 import Bottom from "@/libs/Home_Bottom/Bottom.vue";
 import BreadCrumbs from "@/components/News/BreadCrumbs.vue";
 import { useRoute } from "vue-router";

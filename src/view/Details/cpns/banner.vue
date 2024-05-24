@@ -1,5 +1,5 @@
 <template>
-  <div class="banner image-container container">
+  <div class="banner image-container container" :style="backgroundImageStyle">
     <div class="msgShow">
       <img
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/44c275e8befd1b4aa52bf0584b40a4d7df826a40ea944f466600b53ba0630aa7?apiKey=c94cf1206d5a44cea72bfa67327d7693&"
@@ -10,10 +10,12 @@
           <h1 class="title">{{ title }}</h1>
         </div>
         <div class="userMsg">
-          <p class="id">id:16492263</p>
-          <div class="userName">{{ msg.from }}</div>
+          <div class="baseMsg">
+            <div class="userName">{{ msg.from }}</div>
+            <div class="viewTimes">浏览数:{{ msg.view }}</div>
+            <p class="id">id:16492263</p>
+          </div>
           <div class="publishedDate">发表于:{{ msg.date }}</div>
-          <div class="viewTimes">浏览数:{{ msg.view }}</div>
         </div>
       </div>
     </div>
@@ -26,7 +28,7 @@
           class="action-image"
           alt="Like icon"
         />
-        <p class="action-text">25点赞</p>
+        <p class="action-text">{{ msg.like }}点赞</p>
       </div>
       <div class="separator"></div>
       <div class="article-action">
@@ -35,7 +37,7 @@
           class="action-image"
           alt="Favorite icon"
         />
-        <p class="action-text">15收藏</p>
+        <p class="action-text">{{ msg.star }}收藏</p>
       </div>
       <div class="separator"></div>
       <div class="article-action">
@@ -44,7 +46,7 @@
           class="action-image"
           alt="Share icon"
         />
-        <p class="action-text">314分享</p>
+        <p class="action-text">{{ msg.share }}分享</p>
       </div>
       <div class="separator"></div>
     </div>
@@ -52,9 +54,18 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
-const props = defineProps(["title", "msg"]);
-console.log(props);
+import { defineProps, computed } from "vue";
+
+const props = defineProps(["title", "msg", "headImgURL"]);
+
+const backgroundImageStyle = computed(() => {
+  return {
+    backgroundImage: `url(${
+      props.headImgURL ||
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/554b21ca1ae894286703db97a55a353bee5575d15cea33d7eb59712d6a32d820?apiKey=c94cf1206d5a44cea72bfa67327d7693&"
+    })`,
+  };
+});
 </script>
 
 <style scoped>
@@ -67,7 +78,6 @@ console.log(props);
   align-items: flex-end;
   background-size: cover;
   justify-content: center;
-  background-image: url("https://cdn.builder.io/api/v1/image/assets/TEMP/521db5796b87a7a4dafe211a057eed2f163c29190a2808593fb420400afc09ce?apiKey=c94cf1206d5a44cea72bfa67327d7693&");
 }
 .msgShow {
   display: flex;
@@ -87,6 +97,14 @@ console.log(props);
   flex-direction: column;
   justify-content: center;
 }
+.userMsg {
+  color: #aaa;
+}
+.userMsg .baseMsg {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 .btnArea {
   gap: 20px;
   display: flex;
@@ -102,7 +120,7 @@ console.log(props);
 
 .articleMsg .articleTitle {
   display: flex;
-  margin-top: 0;
+  margin-top: -2em;
   flex-direction: row;
 }
 .articleMsg .articleTitle .title,

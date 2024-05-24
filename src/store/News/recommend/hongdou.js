@@ -29,5 +29,9 @@ const text = `
 探险屋
 `;
 
+const introduction =
+  "龙城向新生态恢复示范园（红豆山庄），位于山西古交市河口镇火山村，是您踏青、赏花、亲近大自然的理想之地。这里曾是煤炭企业，如今已转型为集餐饮、娱乐、住宿、滑雪、高尔夫等休闲活动于一体的高端生态园。古交市北温带大陆性气候，日照充足，四季分明，尤其适合春季出游。乘坐917路公交从太原出发，换乘古交3路即可到达。花开时节，期待您的到来，感受大自然的美好与宁静。";
+const headImgURL =
+  "https://cdn.builder.io/api/v1/image/assets/TEMP/df7fcf7267c419fda4dfa82bfd959a625760110854a9a9a930b4a893a51aa2b1?apiKey=c94cf1206d5a44cea72bfa67327d7693&";
 export default text;
-export { title, msg, text };
+export { introduction, headImgURL, title, msg, text };

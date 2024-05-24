@@ -16,5 +16,8 @@ const text = `
 三座人行天桥工程的交付使用，将助力古交市打造“人车分离，立体过街”的交通系统，进一步改善古交市区内交通环境，减少交通拥堵。
 `;
 
+const introduction =
+  "近日，由山西建投六建集团承建的古交市新建三座人行天桥建设项目提前45天顺利完工并投入使用。这三座人行天桥是2023年古交市政府实施的十件民生实事之一，其中包括便民市场人行天桥、火车站人行天桥和明珠路人行天桥。";
+const headImgURL = "";
 export default text;
-export { title, msg, text };
+export { introduction, headImgURL, title, msg, text };
