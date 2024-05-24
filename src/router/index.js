@@ -50,12 +50,6 @@ const router = createRouter({
               component: () =>
                 import("@/view/BlogEdit/UploadingViews/hotel.vue"),
             },
-            // {
-            //   path: "food",
-            //   name: "美食",
-            //   component: () =>
-            //     import("@/view/BlogEdit/UploadingViews/food.vue"),
-            // },
             {
               path: "path",
               name: "路线",

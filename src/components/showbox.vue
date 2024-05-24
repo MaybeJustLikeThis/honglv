@@ -6,10 +6,14 @@
         query: query,
       }"
     >
-      <img :src="lazy_src" alt="加载失败" :data-src="img_src" />
+      <img
+        :src="lazy_src"
+        alt="加载失败"
+        :data-src="img_src"
+        class="showbox_img"
+      />
       <div class="po">{{ text }}</div>
     </router-link>
-
   </div>
 </template>
 
@@ -37,7 +41,7 @@ onMounted(() => {
   backface-visibility: hidden;
 }
 
-img {
+.showbox_img {
   position: relative;
   width: 100%;
   max-height: 100%;

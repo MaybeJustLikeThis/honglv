@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box_box">
     <Header></Header>
     <div class="main">
       <BreadCrumbs></BreadCrumbs>
@@ -68,7 +68,7 @@ import(`@/store/News/${route.query.store}/${route.query.page}.js`).then(
 
 @import url(../../style/detail.css);
 @import "@/style/News.css";
-.box {
+.box_box {
   justify-content: center;
   align-items: center;
   /* background-color: #fff; */
