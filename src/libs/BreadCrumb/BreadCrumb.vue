@@ -38,7 +38,7 @@ route.matched.map((item) => {
 .breadCrumbs .breadCrumbsItem {
   color: #7f0505;
   align-self: start;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   white-space: nowrap;
   font:
     400 16px Abel,

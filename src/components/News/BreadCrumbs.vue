@@ -23,17 +23,17 @@ export default {
 
 <style scoped>
 .breadCrumbs {
+  width: 120px;
+  margin: 10px;
+  margin-left: 20em;
   display: flex;
-  margin-right: auto;
-  margin-left: 20px;
-  margin: 20px auto 20px 20px;
   gap: 3px;
 }
 
 .breadCrumbs .breadCrumbsItem {
   color: #7f0505;
   align-self: start;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   white-space: nowrap;
   font:
     400 16px Abel,
