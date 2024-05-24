@@ -23,5 +23,9 @@ const text = `
 
 `;
 
+const introduction =
+  "本篇报道详细介绍了古交市岔口乡关头村在抗日战争时期的重要历史地位和丰富的抗日斗争经历。作为革命老区中的老区，关头村承载了抗日战争时期晋绥八分区党政军机关的重要任务，成为八分区抗日根据地的核心所在。";
+const headImgURL =
+  "https://cdn.builder.io/api/v1/image/assets/TEMP/64e6e44f5da6095b01e546121bdc65bc152608d407d7023e0300d8ff31837864?apiKey=c94cf1206d5a44cea72bfa67327d7693&";
 export default text;
-export { title, msg, text };
+export { introduction, headImgURL, title, msg, text };

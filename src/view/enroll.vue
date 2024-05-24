@@ -14,13 +14,15 @@ let verification = ref()
 function enroll(){
     postEnroll(
         {
+
             registerDTO:{
                 "code": invite.value,
                 "identifyCode": verification.value,
                 "password": password.value,
                 "phone":phone.value,
             }
-          
+     
+
         }
     ).then(res=>{
         console.log(res.data);
@@ -30,6 +32,7 @@ function enroll(){
 //发送验证码
 function verificatione() {
     postVerification({
+
         sendCodeDTO:{
          phone: phone.value,
         status: 0,
