@@ -21,6 +21,7 @@ let data = ref();
 function handleLike(id, like_type) {
   // 在这里处理从子组件传递过来的点赞id
   console.log(id);
+  
 }
 onMounted(() => {
   getHomeTOPRoute()

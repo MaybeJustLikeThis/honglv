@@ -37,10 +37,10 @@
         <div class="text-content">
           <p>{{ item.summary }}</p>
         </div>
-        <div class="content-user">
+        <!-- <div class="content-user">
           <span>{{ user_name }}</span> <span>{{ view_num }}浏览</span>
           <span> {{ comments_num }}评论</span>
-        </div>
+        </div> -->
       </div>
     </router-link>
   </div>
@@ -158,7 +158,7 @@ hr {
 }
 .text-content {
   position: relative;
-  width: 46%;
+  width: 60%;
   height: 100%;
   color: #666666;
   /* background-color: rgb(28, 199, 65); */
@@ -166,6 +166,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
 }
 p {
   position: relative;
@@ -186,11 +187,16 @@ img {
   position: relative;
   height: 100%;
   width: 100%;
+  object-fit: contain;
+}
+.content-like {
+  transform: scale(0.8, 0.8);
 }
 .content-like-icon {
   position: relative;
   width: 40px;
-  left: 10px;
+  left: 2px;
+  bottom: 2px;
   height: 20px;
 }
 .content-from-text {

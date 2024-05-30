@@ -2,7 +2,7 @@
   <div id="carousel_container">
     <el-carousel id="carousel">
       <el-carousel-item v-for="item in carousel" :key="item.id">
-        <img :src="item.url" alt="" />
+        <img :src="item.url" alt="" class="carousel_container_img" />
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -30,7 +30,10 @@ const carousel = ref([
   height: 100%;
   /* width: 100%; */
 }
-
+.carousel_container_img {
+  width: 100%;
+  height: 100%;
+}
 .el-carousel__item:nth-child(2n) {
   background-color: #99a9bf;
 }

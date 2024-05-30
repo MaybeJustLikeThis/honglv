@@ -24,19 +24,23 @@ import showbox from "@/components/showbox.vue";
 import { ref } from "vue";
 const items = ref([
   {
-    img_src: "../../../../public/home/游记1.png",
+    img_src:
+      "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E4%BF%9D%E6%8A%A4%E5%8D%95%E4%BD%8D.png",
     text: "县（市）级 文物保护单位",
   },
   {
-    img_src: "../../../../public/home/游记2.png",
+    img_src:
+      "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E8%A5%BF%E5%B1%B1%E6%99%93%E6%9C%88.png",
     text: "“西山晓月” 夜景灯光",
   },
   {
-    img_src: "../../../../public/home/游记3.png",
+    img_src:
+      "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E9%BE%99%E5%9F%8E%E6%96%B0%E7%94%9F%E6%80%81.png",
     text: "龙城向新生态恢复示范园",
   },
   {
-    img_src: "../../../../public/home/游记4.png",
+    img_src:
+      "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E9%9D%92%E5%B1%B1%E7%BB%BF%E6%B0%B4.png",
     text: "两川相夹 背山临水",
   },
 ]);
@@ -98,7 +102,7 @@ const items = ref([
   background: #ffffff00;
   border-radius: 0 0 0 0;
   font-size: 10px;
-  color: #141212;
+  color: #797979;
   bottom: 32%;
   left: 36%;
   width: 30%;

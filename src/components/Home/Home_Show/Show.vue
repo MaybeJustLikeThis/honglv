@@ -33,7 +33,7 @@
         ></showbox>
         <showbox
           class="box"
-          img_src="../../../../public/home/文创.png"
+          img_src="https://yunding-ljt.oss-cn-beijing.aliyuncs.com/%E6%96%87%E5%88%9B.png"
           text="文创"
         ></showbox>
       </div>
