@@ -57,19 +57,19 @@ const allRoutes = reactive({
 
 const imgs = ref([
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/1.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/News%20(2).jpg",
     desc: "“中国北方第一家文化巨擘”",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/2.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/News%20(4).jpg",
     desc: "中国首批重点文物保护单位",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/3.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/News%20(1).jpg",
     desc: "世界上最大的黄色瀑布",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/4.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/News%20(3).jpg",
     desc: "感受晋商文化的浓郁味道",
   },
 ]);

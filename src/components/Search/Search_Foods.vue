@@ -56,19 +56,19 @@ const allRoutes = reactive({
 
 const imgs = ref([
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/1.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/food_4.jpg",
     desc: "吃在嘴中，味在心里",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/2.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/food_3.jpg",
     desc: "食不可挡",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/3.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/food_2.jpg",
     desc: "“舌尖上的美食”",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/4.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/food_1.jpg",
     desc: "探寻味蕾的盛宴，尽在中华美食之中。",
   },
 ]);

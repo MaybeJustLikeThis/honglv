@@ -57,19 +57,19 @@ const allRoutes = reactive({
 
 const imgs = ref([
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/1.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Commodities%20(1).jpg",
     // desc:"执笔写江湖"
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/2.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Commodities%20(4).jpg",
     // desc:"执笔写江湖"
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/3.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Commodities%20(3).jpg",
     // desc:"执笔写江湖"
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/4.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Commodities%20(2).jpg",
     // desc:"执笔写江湖"
   },
 ]);

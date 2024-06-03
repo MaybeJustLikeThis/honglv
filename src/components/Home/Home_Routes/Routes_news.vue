@@ -7,17 +7,17 @@
   <div class="news">
     <div class="header"><p>最新资讯</p></div>
     <div class="content">
-      <div class="box" v-for="article in articles" :key="article.id">
+      <div class="box" v-for="article in data_news" :key="article.id">
         <router-link
           :to="{
             path: '/home_routes_news',
             query: {
               store: 'lastNews',
-              page: article.page,
+              page: article.id === 5 ? 'coal' : 'bridge',
             },
           }"
         >
-          <span>{{ article.creatTime }}</span
+          <span>{{ article.createTime }}</span
           ><br />
           {{ article.title }}
         </router-link>
@@ -31,7 +31,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onBeforeMount } from "vue";
+import { getTOPnews } from "@/utils/api/index.js";
+let data_news = ref([]);
 const articles = ref([
   {
     id: 1,
@@ -64,6 +66,13 @@ const articles = ref([
     page: "coalToEle",
   },
 ]);
+
+onBeforeMount(() => {
+  getTOPnews().then((res) => {
+    console.log(res.data);
+    data_news.value = res.data;
+  });
+});
 </script>
 
 <style scoped>
@@ -97,6 +106,7 @@ p {
   height: 90%;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 .box {
   flex: 1 1 auto;

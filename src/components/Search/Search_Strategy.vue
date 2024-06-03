@@ -60,19 +60,19 @@ const allRoutes = reactive({
 
 const imgs = ref([
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/1.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Strategies%20(1).jpg",
     desc: "我知我喜乐，纵情跋涉",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/2.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Strategies%20(4).jpg",
     desc: "年轻要任性 外出要尽兴",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/3.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Strategies%20(2).jpg",
     desc: "风吹又日晒 自由又自在",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/4.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Strategies%20(3).jpg",
     desc: "假如生活欺骗了你，不如一路向西去大理",
   },
 ]);

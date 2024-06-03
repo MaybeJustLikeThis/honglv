@@ -78,6 +78,12 @@ function getTopdestinations() {
   });
 }
 
+function getTOPnews() {
+  return createCacheableRequest({
+    url: "/news/getTopNews",
+    method: "get",
+  });
+}
 export {
   getLogin,
   postLogin,
@@ -85,5 +91,6 @@ export {
   getRouteInfo,
   getTOPInformation,
   getlike,
+  getTOPnews,
   getTopdestinations,
 };

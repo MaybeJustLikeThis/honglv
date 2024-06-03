@@ -54,6 +54,7 @@
 import { defineEmits } from 'vue'
 const emit = defineEmits(["deleteBtnClk"])
 const deleteClick = () => {
+    
     emit("deleteBtnClk")
 }
 </script>

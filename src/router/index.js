@@ -194,9 +194,8 @@ if (isLogin) {
 //前置导航守卫(部分地方用)
 router.beforeEach((to, from) => {
   const token = localStorage.getItem("Honglv_token");
-  // if (!token && to.path == "/xxx") {
-  //   return "/login";
-  // }
+  if (to == "/AdminCenter/AllAttractions") {
+  }
 });
 
 export default router;

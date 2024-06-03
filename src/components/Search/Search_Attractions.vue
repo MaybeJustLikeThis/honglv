@@ -60,20 +60,20 @@ const allRoutes = reactive({
 
 const imgs = ref([
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/1.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Attractions%20(4).jpg",
     desc: "了解皇城文化，帝都文化",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/2.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Attractions%20(3).jpg",
     desc: "最多样化的喀斯特形态",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/3.jpg",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Attractions%20(2).jpg",
     desc: "大理南诏风情岛",
   },
   {
-    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/4.jpg",
-    desc: "西藏自驾追冰：冬日限定美景，零距离接触蓝冰冰洞到底有多美",
+    url: "https://yunding-ljt.oss-cn-beijing.aliyuncs.com/Attractions%20(1).jpg",
+    desc: "趁年轻，一起去爬山",
   },
 ]);
 
