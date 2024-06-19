@@ -7,14 +7,21 @@ function createCacheableRequest(config, ttl = 600000) {
   const { url, method, data, query } = config;
   const cacheKey = JSON.stringify({ url, method, data, query });
 
-  const cachedItem = cache[cacheKey];
-  if (cachedItem && Date.now() - cachedItem.timestamp < ttl) {
-    return Promise.resolve(cachedItem.response);
+  const cachedItem = localStorage.getItem(cacheKey);
+
+  if (cachedItem) {
+    const parsedItem = JSON.parse(cachedItem);
+    if (Date.now() - parsedItem.timestamp < ttl) {
+      return Promise.resolve(parsedItem.response);
+    }
   }
 
   return request(config)
     .then((response) => {
-      cache[cacheKey] = { response, timestamp: Date.now() };
+      localStorage.setItem(
+        cacheKey,
+        JSON.stringify({ response, timestamp: Date.now() })
+      );
       return response;
     })
     .catch((err) => {

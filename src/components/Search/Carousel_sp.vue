@@ -6,7 +6,7 @@
         :key="item.id"
         id="el-carousel__item"
       >
-        <img :src="item.url" alt="" />
+        <img :src="item.url" alt="" class="carousel_container_img" />
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -30,6 +30,10 @@ const carousel = ref([
 }
 #carousel {
   position: relative;
+  height: 100%;
+}
+.carousel_container_img {
+  width: 100%;
   height: 100%;
 }
 :deep(.el-carousel .el-carousel__container) {

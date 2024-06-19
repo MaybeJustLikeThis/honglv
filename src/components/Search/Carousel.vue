@@ -23,7 +23,7 @@ const carousel = ref([
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: brown;
+  /* background-color: brown; */
 }
 #carousel {
   position: relative;
